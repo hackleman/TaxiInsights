@@ -1,0 +1,47 @@
+.scroll {
+    background-color: var(--off-white);
+    line-height: 1.6;
+    font-size: 1.4rem;
+    position: sticky;
+    top: 0px;
+    width: 100%;
+    height: 80px;
+    z-index: 3000;
+    box-shadow: 0 4px 14px 0 rgba(0, 0, 0, 0.15);
+  }
+  
+  .scroll-logo {
+    height: 60px;
+    width: 60px;
+  }
+  
+  .scroll-logo:hover {
+    cursor: pointer;
+  }
+  
+  .scroll .scroll-content {
+    max-width: 900px;
+    padding: 0rem 3rem;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center; 
+    height: 100%;
+  } 
+  
+  .scroll-item {
+    display: inline;
+    margin-left: 2rem;
+    color: #333;
+  }
+  
+  .scroll-item > .active {
+      border-bottom: 2px solid #333;
+  }
+
+  .scroll-item:hover {
+    color: black;
+    cursor: pointer;
+  
+  }
