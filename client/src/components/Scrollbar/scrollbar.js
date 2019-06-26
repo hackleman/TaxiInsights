@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import { Link as LinkScroll, animateScroll as scroll } from "react-scroll";
+import { Link } from 'react-router-dom';
 
+import logo from '../../logo.svg';
 import './scrollbar.css';
 
 class ScrollBar extends Component {
@@ -16,6 +18,13 @@ class ScrollBar extends Component {
     return (
       <nav className="scroll" id="scrollbar">
       <div className="scroll-content">
+      <Link to="/">
+                <img
+                src={logo}
+                className="scroll-logo"
+                alt="Logo."
+            />
+                </Link>
         <ul className="scroll-items">
           <li className="scroll-item">
           <LinkScroll
@@ -36,7 +45,7 @@ class ScrollBar extends Component {
               smooth={true}
               offset={-400}
               duration={500} >
-              Data
+              Charts
             </LinkScroll>
             </li>
           <li className="scroll-item">
@@ -47,13 +56,13 @@ class ScrollBar extends Component {
               smooth={true}
               offset={-400}
               duration={500} >
-              Taxis
+              Graphs
             </LinkScroll>
             </li>
             <li 
                 className="scroll-item"
                 onClick={this.scrollToBottom}>
-                  Contact Me
+                  Join
             </li>
         </ul>
       </div>

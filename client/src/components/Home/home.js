@@ -46,12 +46,12 @@ class Home extends Component {
                 page = "/graphs"
             />
             <Section 
-                title="Contact me"
+                title="Login / Register"
                 dark={true}
                 id="about"
                 style={4}
                 nobody = {true}
-                page = "/"
+                page = "/login"
                 
             />
 

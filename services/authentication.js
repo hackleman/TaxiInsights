@@ -5,7 +5,7 @@ const http = require('http');
 const bodyParser = require('body-parser');
 const passport = require('passport');
 const mongoose = require('mongoose');
-const config = require('../config/default');
+const config = require('config');
 const users = require('../routes/users');
 
 let server;
@@ -33,11 +33,6 @@ function initialize() {
     app.use(cors());
 
     app.use(bodyParser.json());
-
-    app.use(passport.initialize());
-    app.use(passport.session());
-
-    require('../config/passport.js')(passport);
 
     app.use('/users', users);
 

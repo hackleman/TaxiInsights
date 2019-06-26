@@ -1,10 +1,11 @@
 import React from 'react';
 import logo from '../../logo.svg';
 import NavBar from '../Navbar/navbar';
-import './charts.css';
+import './contact.css';
 
-function Charts() {
+function Contact() {
   return (
+      
     <div className="App">
       <NavBar />
       <header className="App-header">
@@ -25,4 +26,4 @@ function Charts() {
   );
 }
 
-export default Charts;
+export default Contact;

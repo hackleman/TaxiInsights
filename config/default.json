@@ -1,5 +1,5 @@
 {
-    "mongoURI": "mongodb+srv://Hackleman:Jj7405070366@cluster0-6bs3p.mongodb.net/test?retryWrites=true",
+    "MongoURI": "mongodb+srv://Hackleman:Jj7405070366@cluster0-6bs3p.mongodb.net/test?retryWrites=true",
     "jwtSecret": "rosebud"
 
 }

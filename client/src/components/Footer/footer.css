@@ -1,3 +1,4 @@
-footer {
+.myfooter {
     background: var(--off-white);
+    height: 15vh;
 }

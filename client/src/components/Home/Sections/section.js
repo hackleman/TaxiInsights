@@ -30,21 +30,17 @@ export default function Section({ title, subtitle, dark, id, style, extra, nosty
             <span className="border-title">
               {title}
             </span>
-            
           </div>
           <br></br>
-
           <div className = { "section-text" + (nobody ? " nobody": "")}>
             <div className ="border">
               {subtitle}
             </div>
-            
           </div>
           <div >
             {extra ? <Padding />: <div></div>}
           </div>
         </div>
-
         </div>
         </Link>
 

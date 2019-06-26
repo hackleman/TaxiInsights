@@ -43,13 +43,13 @@ router.post('/authenticate', (req, res, next) => {
   const password = req.body.password || null;
 
   if (!username|| !password) {
-    return res.json({success: false, msg: "fill out all fields"});
+    return res.status(400).json({ msg: 'Please enter all fields' });
   }
 
   User.getUserByUsername(username, (err, user) => {
     if(err) throw err;
     if(!user){
-      return res.json({success: false, msg: 'User not found'});
+      return res.status(400).json({ msg: 'User Does not exist' });
     }
 
     User.comparePassword(password, user.password, (err, isMatch) => {
@@ -78,7 +78,7 @@ router.post('/authenticate', (req, res, next) => {
 
 
       } else {
-        return res.json({success: false, msg: 'Wrong password'});
+        return res.status(400).json({ msg: 'Invalid credentials' });
       }
     });
   });
