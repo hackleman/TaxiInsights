@@ -1,20 +1,12 @@
 import React, {Component} from 'react';
-import { BrowserRouter as Router, Route, Redirect } from "react-router-dom";
-import {
-  Container, 
-  Col, 
-  Form,
-  FormGroup, 
-  Label, 
-  Input,
-  Button,
-} from 'reactstrap';
-import NavBar from '../Navbar/navbar';
-import {connect} from 'react-redux';
+import { Redirect, Link } from "react-router-dom";
+
+import { connect } from 'react-redux';
 import { login } from '../../actions/auth';
-import {clearErrors} from '../../actions/error';
+import { clearErrors } from '../../actions/error';
 import PropTypes from 'prop-types';
-import './auth.css';
+import logo from '../../logos/login.svg';
+import './auth.scss';
 
 class Auth extends Component {
 
@@ -31,21 +23,12 @@ class Auth extends Component {
     clearErrors: PropTypes.func.isRequired
   }
 
-  componentDidMount() {
-    
-  }
-
-  componentDidUpdate(prevProps) {
-    const { error, isAuthenticated } = this.props;
-
-  }
-  
   onChange = e => {
     this.setState({ [e.target.name] : e.target.value });
+    console.log(this.state);
   }
 
   onSubmit = e => {
-    e.preventDefault();
     this.props.clearErrors();
 
     const { username, password } = this.state;
@@ -54,46 +37,49 @@ class Auth extends Component {
       username,
       password
     }
-    console.log(newUser)
+
     this.props.login(newUser);
   }
 
   render() {
 
+    if (this.props.isAuthenticated) {
+      return <Redirect to='/Charts' />
+    }
+
     return (
-      <div>
-        <NavBar />
-        <Container className="Login">
-          <h2 className = "Login-header">Login</h2>
-          <Form className="form" onSubmit = {this.onSubmit}>
-            <Col>
-              <FormGroup>
-                <Label for="username">Username</Label>
-                <Input
-                  type="username"
-                  name="username"
-                  id="username"
-                  placeholder="hordeslayer666"
-                  onChange={this.onChange}
-                />
-              </FormGroup>
-            </Col>
-            <Col>
-              <FormGroup>
-                <Label for="password">Password</Label>
-                <Input
-                  type="password"
-                  name="password"
-                  id="password"
-                  placeholder="********"
-                  onChange={this.onChange}
-                />
-              </FormGroup>
-            </Col>
-            <Button className = "Login-button">Submit</Button>
-          </Form>
-        </Container>
-      </div>
+        <div className = "mainlogin">
+          <div className = "container">
+            <div className="login-container">
+              <div className = "loginheader">Login</div>
+              <div className = "logincontent">
+                <div className = "loginimage">
+                  <img src = {logo} />
+                </div>
+                <div className = "loginform">
+                  <div className = "loginformgroup">
+                    <label htmlFor="username">Username</label>
+                    <input type="text" onChange={this.onChange} name="username" placeholder="username"/>     
+                  </div>
+                  <div className = "loginformgroup">
+                    <label htmlFor="password">Password</label>
+                    <input type="text" onChange={this.onChange} name="password" placeholder="********"/>     
+                  </div>
+                </div>
+                <div className = "loginfooter">
+                  <button type= "button" className="loginbtn" onClick = {this.onSubmit}>
+                    Submit
+                  </button>
+                  <button type= "button" className="loginbtn register" onClick = {this.onSubmit}>
+                  <Link to='/register'>Register</Link> 
+                  </button>
+                </div>
+              </div>
+            </div>
+            </div>
+            </div>
+     
+
   );
   }
 }

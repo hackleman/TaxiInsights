@@ -1,4 +1,11 @@
 .myfooter {
-    background: var(--off-white);
-    height: 15vh;
+    background: #F0EAD6;
+    padding-top: 3vh;
+    box-shadow: 4px 4px 14px 4px rgba(0, 0, 0, 0.3);
+    z-index: 100000;
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    height: 10vh;
+
 }

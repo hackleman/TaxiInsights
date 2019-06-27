@@ -14,7 +14,7 @@ import {
 
   // Check token & load user
 
-  export const loadUser = () => (dispatch, getState) => {
+export const loadUser = () => (dispatch, getState) => {
 
 
     // User loading
@@ -56,6 +56,32 @@ export const login = ({ username, password }) => dispatch => {
             );
             dispatch({
                 type: LOGIN_FAIL
+            });
+        });
+};
+
+// Register User
+export const register = ({ username, email, password }) => dispatch => {
+    // Headers
+    const config = {
+        headers: {
+            'Content-Type': 'application/json'
+        }
+    }
+
+    // Request body
+    const body = JSON.stringify({ username, email, password });
+
+    axios.post('http://localhost:5000/users/register', body, config)
+        .then(res => dispatch({
+            type: REGISTER_SUCCESS,
+            payload: res.data
+        }))
+        .catch(err => {
+            dispatch(returnErrors(err.response.data, err.response.status, 'REGISTER_FAIL')
+            );
+            dispatch({
+                type: REGISTER_FAIL
             });
         });
 };

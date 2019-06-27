@@ -1,0 +1,35 @@
+const Pool = require('pg').Pool
+const pool = new Pool({
+    user:'me',
+    host: 'localhost',
+    database: 'api',
+    password: 'password',
+    port: 5432,
+})
+
+const getUsers = (req, res) => {
+    pool.query('SELECT * FROM users ORDER BY id ASC', (err, results) => {
+        if (err) {
+            throw err
+        }
+        res.status(200).json(results.rows)
+    })
+}
+
+const getUsersById = (req, res) => {
+
+    let id = parseInt(req.params.id)
+    if (isNaN(id)) { id = 0 }
+
+    pool.query('SELECT * FROM users WHERE id = $1', [id], (err, results) => {
+        if (err) {
+            throw err
+        }
+        res.status(200).json(results.rows)
+    })
+}
+
+module.exports = {
+    getUsers,
+    getUsersById
+}

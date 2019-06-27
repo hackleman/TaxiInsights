@@ -1,27 +1,37 @@
 import React from 'react';
-import logo from '../../logo.svg';
-import NavBar from '../Navbar/navbar';
+import Section from './Sections/sections';
 import './graphs.css';
 
 function Graphs() {
   return (
-    <div className="App">
-      <NavBar />
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/components/Graphs/graphs.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+      <div>
+          <Section 
+              title="Map 1"
+              dark={false}
+              page = "/graphs/1"
+              color = '#FFF2AF'
+          />
+          <Section 
+              title="Map 2"
+              dark={true}
+              page = "/graphs/2"
+              color = '#F6CF65'
+          />
+          <Section 
+              title="Map 3"
+              dark={false}
+              page = "/graphs/3"
+              color = '#C3ECB2'
+          />
+          <Section 
+              title="Map 4"
+              dark={true}
+              page = "/graphs/4"
+              color = '#AADAFF'
+              
+          />
+        </div>
+
   );
 }
 

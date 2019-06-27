@@ -24,7 +24,8 @@
     "mongoose": "*",
     "morgan": "^1.9.1",
     "passport": "*",
-    "passport-jwt": "*"
+    "passport-jwt": "*",
+    "pg": "^7.11.0"
   },
   "devDependencies": {
     "grunt": "^1.0.4",

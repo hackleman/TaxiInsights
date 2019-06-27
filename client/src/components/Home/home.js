@@ -14,8 +14,8 @@ class Home extends Component {
   }
 
   componentDidMount() {
-      console.log(this.state);
   }
+  
   render() {
     return (
         <div>
@@ -23,36 +23,38 @@ class Home extends Component {
             <Section 
                 title="Taxi Companion App."
                 dark={false}
+                header={true}
                 id="main"
                 extra = {true}
                 nobody = {true}
-                style = {1}
                 page = "/"
+                img = ' taxis '
             />
             <Section 
                 title="charts"
                 subtitle={this.state.placeholder.section2}
                 dark={true}
+                header={false}
                 id="charts"
-                style = {2}
                 page = "/charts"
+                img = ' chartimg '
             />
             <Section 
-                title="graphs"
-                subtitle={this.state.placeholder.section2}
+                title="Maps"
+                subtitle={this.state.placeholder.section4}
                 dark={false}
+                header={false}
                 id="graphs"
-                style = {5}
                 page = "/graphs"
+                img = ' mapimg '
             />
             <Section 
                 title="Login / Register"
-                dark={true}
+                dark={false}
+                header={false}
                 id="about"
-                style={4}
                 nobody = {true}
                 page = "/login"
-                
             />
 
         </div>

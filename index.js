@@ -1,24 +1,43 @@
-const mainApp = require('./services/authentication.js');
+const main = require('./services/authentication.js');
+const postgres = require('./services/database.js');
 
-
-async function startmainApp() {
+async function startauth() {
   console.log("Starting main app..");
   try {
-	  await mainApp.initialize();
+	  await main.initialize();
   } catch (err) {
 	  console.error(err);
   	  process.exit(1);
   }
 }
 
-startmainApp();
+async function startpostgres() {
+  console.log("Starting postgres.. ");
+  try {
+    await postgres.initialize();
+  } catch (err) {
+    console.error(err);
+    process.exit(1);
+  }
+}
+
+startauth();
+startpostgres();
 
 
 async function shutdown(e) {
+
   let err = e;
   console.log('Shutting down');
   try {
-    await mainApp.close();
+    await main.close();
+  } catch (e) {
+    console.log('Encountered error', e);
+    err = err || e;
+  }
+
+  try {
+    await postgres.close();
   } catch (e) {
     console.log('Encountered error', e);
     err = err || e;
