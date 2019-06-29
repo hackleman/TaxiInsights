@@ -6,19 +6,20 @@ import './home.css'
 
 class Home extends Component {
 
-  constructor() {
-      super();
-      this.state = {
-          placeholder: placeholder
-      }
+  state = {
+      placeholder: placeholder
   }
-
+  
+  
   componentDidMount() {
   }
   
   render() {
+    const { animationContainerReference } = this.props
+
     return (
-        <div>
+        <div ref= {animationContainerReference}>
+            <script src="https://unpkg.com/scrollreveal"></script>
             <ScrollBar />
             <Section 
                 title="Taxi Companion App."
@@ -30,6 +31,7 @@ class Home extends Component {
                 page = "/"
                 img = ' taxis '
             />
+
             <Section 
                 title="charts"
                 subtitle={this.state.placeholder.section2}
@@ -39,6 +41,8 @@ class Home extends Component {
                 page = "/charts"
                 img = ' chartimg '
             />
+
+            
             <Section 
                 title="Maps"
                 subtitle={this.state.placeholder.section4}
@@ -48,6 +52,7 @@ class Home extends Component {
                 page = "/graphs"
                 img = ' mapimg '
             />
+
             <Section 
                 title="Login / Register"
                 dark={false}

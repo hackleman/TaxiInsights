@@ -6,6 +6,7 @@ const bodyParser = require('body-parser');
 const config = require('config');
 const data = require('../routes/postgres');
 
+
 let server;
 
 function initialize() {
@@ -14,7 +15,6 @@ function initialize() {
 
     const app = express();
     server = http.createServer(app);
-
     const port = 4000;
 
     app.use(cors());

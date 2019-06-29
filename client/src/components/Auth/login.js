@@ -6,6 +6,7 @@ import { login } from '../../actions/auth';
 import { clearErrors } from '../../actions/error';
 import PropTypes from 'prop-types';
 import logo from '../../logos/login.svg';
+import Zoom from 'react-reveal/Zoom';
 import './auth.scss';
 
 class Auth extends Component {
@@ -50,6 +51,7 @@ class Auth extends Component {
     return (
         <div className = "mainlogin">
           <div className = "container">
+            <Zoom>
             <div className="login-container">
               <div className = "loginheader">Login</div>
               <div className = "logincontent">
@@ -76,6 +78,7 @@ class Auth extends Component {
                 </div>
               </div>
             </div>
+            </Zoom>
             </div>
             </div>
      

@@ -1,7 +1,7 @@
-const main = require('./services/authentication.js');
+const main = require('./services/server.js');
 const postgres = require('./services/database.js');
 
-async function startauth() {
+async function start() {
   console.log("Starting main app..");
   try {
 	  await main.initialize();
@@ -21,7 +21,7 @@ async function startpostgres() {
   }
 }
 
-startauth();
+start();
 startpostgres();
 
 

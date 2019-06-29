@@ -49,7 +49,7 @@ function initialize() {
     });
 
     app.listen(port, () => {
-      console.log('Auth server listening on localhost: ' + port);
+      console.log('Main server listening on localhost: ' + port);
     });
   });
 }

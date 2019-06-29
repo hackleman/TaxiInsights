@@ -1,14 +1,7 @@
 import React, { Component } from 'react';
 import axios from 'axios';
-import {
-  Container, 
-  Col, 
-  Form,
-  FormGroup, 
-  Label, 
-  Input,
-  Button,
-} from 'reactstrap';
+import Zoom from 'react-reveal/Zoom';
+
 import './contact.css';
 
 class Contact extends Component {
@@ -60,6 +53,7 @@ class Contact extends Component {
     return (
       <div className = "mainlogin messages">
           <div className = "container">
+          <Zoom>
             <div className="login-container messages">
               <div className = "loginheader">Send Me A Message!</div>
               <div className = "logincontent">
@@ -87,6 +81,7 @@ class Contact extends Component {
                 </div>
               </div>
             </div>
+            </Zoom>
             </div>
             </div>
      

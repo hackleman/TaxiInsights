@@ -6,6 +6,7 @@ import { register } from '../../actions/auth';
 import { clearErrors } from '../../actions/error';
 import PropTypes from 'prop-types';
 import logo from '../../logos/login.svg';
+import Zoom from 'react-reveal/Zoom';
 import './auth.scss';
 
 import {
@@ -62,6 +63,7 @@ class Register extends Component {
     return (
       <div className = "mainlogin">
       <div className = "container">
+        <Zoom>
           <div className="login-container registration">
             <div className = "loginheader">Register</div>
             <div className = "logincontent">
@@ -96,6 +98,7 @@ class Register extends Component {
               </div>
             </div>
           </div>
+          </Zoom>
         </div>
         </div>
     );
