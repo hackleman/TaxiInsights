@@ -29,12 +29,6 @@ async function shutdown(e) {
 
   let err = e;
   console.log('Shutting down');
-  try {
-    await main.close();
-  } catch (e) {
-    console.log('Encountered error', e);
-    err = err || e;
-  }
 
   try {
     await postgres.close();
@@ -42,6 +36,14 @@ async function shutdown(e) {
     console.log('Encountered error', e);
     err = err || e;
   }
+
+  try {
+    await main.close();
+  } catch (e) {
+    console.log('Encountered error', e);
+    err = err || e;
+  }
+
 
 
   console.log('Exiting process');

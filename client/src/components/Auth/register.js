@@ -5,16 +5,11 @@ import { connect } from 'react-redux';
 import { register } from '../../actions/auth';
 import { clearErrors } from '../../actions/error';
 import PropTypes from 'prop-types';
-import logo from '../../logos/login.svg';
-import Zoom from 'react-reveal/Zoom';
+import logo from '../../logos/register.svg';
+import Fade from 'react-reveal/Fade';
 import './auth.scss';
 
-import {
-  Container, Col, Form,
-  FormGroup, Label, Input,
-  Button,
-} from 'reactstrap';
-import './auth.scss';
+
 
 class Register extends Component {
 
@@ -63,9 +58,9 @@ class Register extends Component {
     return (
       <div className = "mainlogin">
       <div className = "container">
-        <Zoom>
+        <Fade>
           <div className="login-container registration">
-            <div className = "loginheader">Register</div>
+          
             <div className = "logincontent">
               <div className = "loginimage">
                 <img src = {logo} />
@@ -98,7 +93,7 @@ class Register extends Component {
               </div>
             </div>
           </div>
-          </Zoom>
+          </Fade>
         </div>
         </div>
     );

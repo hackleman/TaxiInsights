@@ -13,7 +13,11 @@ import NavBar from './components/Navbar/navbar';
 import Footer from './components/Footer/footer';
 import Charts from './components/Charts/charts';
 import Chart1 from './components/Charts/Chart1/chart1';
-import Graphs from './components/Graphs/graphs';
+import Maps from './components/Maps/mapindex';
+import Map1 from './components/Maps/Map1/map1';
+import Map2 from './components/Maps/Map2/map2';
+import Map3 from './components/Maps/Map3/map3';
+import Map4 from './components/Maps/Map4/map4';
 import Auth from './components/Auth/login';
 import Register from './components/Auth/register';
 import Contact from './components/Contact/contact';
@@ -54,7 +58,11 @@ class App extends Component {
                       render = {(routeProps) => (
                         <Chart1 legendPosition="top"/>
                       )} /> 
-                    <Route exact path="/graphs" component={Graphs} />
+                    <Route exact path="/maps" component={Maps} />
+                    <Route exact path="/maps/1"  component={Map1} />
+                    <Route exact path="/maps/2"  component={Map2} />
+                    <Route exact path="/maps/3"  component={Map3} />
+                    <Route exact path="/maps/4"  component={Map4} />
                     <Route exact path="/login" component={Auth} />
                     <Route exact path="/register" component={Register} />
                     <Route exact path="/contact" component={Contact} />

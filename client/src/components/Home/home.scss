@@ -1,4 +1,6 @@
-
+.landingpage {
+  width: 100%;
+}
 .section {
   font-family: Arial, Helvetica, sans-serif;
   line-height: 1.6;
@@ -9,10 +11,12 @@
   align-items: center;
   justify-content: center;
   text-align: center;
+
 }
 
-
-a:hover { color: none !important; }
+.sectioncontainer a:hover {
+  color: white !important;
+}
 
 .section-dark {
   background: #333;
@@ -64,6 +68,10 @@ a:hover { color: none !important; }
 .headertitle {
   height: 84vh !important;
 }
+
+/*
+ Options passed to Sections function
+  */
 
 .notextstyle {
   height: 33vh; 

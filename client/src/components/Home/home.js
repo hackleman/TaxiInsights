@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import Section from './Sections/section';
 import ScrollBar from '../Scrollbar/scrollbar';
 import placeholder from './Sections/placeholder';
-import './home.css'
+import './home.scss'
 
 class Home extends Component {
 
@@ -15,22 +15,21 @@ class Home extends Component {
   }
   
   render() {
-    const { animationContainerReference } = this.props
 
     return (
-        <div ref= {animationContainerReference}>
-            <script src="https://unpkg.com/scrollreveal"></script>
-            <ScrollBar />
-            <Section 
-                title="Taxi Companion App."
-                dark={false}
-                header={true}
-                id="main"
-                extra = {true}
-                nobody = {true}
-                page = "/"
-                img = ' taxis '
-            />
+        <div class="landingpage">
+ 
+             <ScrollBar />
+             <Section 
+                 title="Taxi Companion App."
+                 dark={false}
+                 header={true}
+                 id="main"
+                 extra = {true}
+                 nobody = {true}
+                 page = "/"
+                 img = ' taxis '
+             /> 
 
             <Section 
                 title="charts"
@@ -49,7 +48,7 @@ class Home extends Component {
                 dark={false}
                 header={false}
                 id="graphs"
-                page = "/graphs"
+                page = "/maps"
                 img = ' mapimg '
             />
 

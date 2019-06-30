@@ -1,13 +1,13 @@
 import React, { Component } from 'react';
 import Section from './Sections/sections';
-import './charts.css';
+import './charts.scss';
 
 class Charts extends Component {
 
 
   render() {
     return (
-        <div>
+        <div className = "chartindex">
           <Section 
               title="Chart 1"
               dark={false}

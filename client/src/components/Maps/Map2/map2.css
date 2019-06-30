@@ -1,0 +1,14 @@
+.map2header {
+    order: 0;
+  }
+  
+  .map2component {
+    box-shadow: 14px 14px 14px 14px rgba(0, 0, 0, 0.3);
+    width: 100%;
+  }
+
+  .leaflet-container {
+    box-shadow: 24px 4px 14px 14px rgba(0, 0, 0, 0.3);
+    height: 60vh;
+    width: 100%;
+}

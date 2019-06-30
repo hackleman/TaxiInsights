@@ -29,8 +29,13 @@
   position: absolute;
 }
 
+
+
 .mainBody {
   padding-bottom: 10vh;
+  min-height: 100vh !important;
+  display: flex;
+  justify-content: center; 
 }
 
 .fade-appear,

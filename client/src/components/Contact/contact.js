@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
 import axios from 'axios';
-import Zoom from 'react-reveal/Zoom';
+import Fade from 'react-reveal/Fade';
+import logo from '../../logos/contact.svg';
 
-import './contact.css';
+import '../Auth/auth.scss';
 
 class Contact extends Component {
 
@@ -34,7 +35,7 @@ class Contact extends Component {
         this.setState({ sent: true }, this.resetForm())
       })
       .catch( () => {
-        console.log('Message nost sent');
+        console.log('Message not sent');
       })
 
     console.log(data);
@@ -51,39 +52,35 @@ class Contact extends Component {
 
   render() {
     return (
-      <div className = "mainlogin messages">
-          <div className = "container">
-          <Zoom>
-            <div className="login-container messages">
-              <div className = "loginheader">Send Me A Message!</div>
-              <div className = "logincontent">
-                <div className = "loginimage">
-                  <img  />
-                </div>
-                <div className = "loginform">
-                  <div className = "loginformgroup">
-                    <label htmlFor="name">Name</label>
-                    <input type="text" onChange={this.onChange} name="name" placeholder="John Doe"/>     
-                  </div>
-                  <div className = "loginformgroup">
-                    <label htmlFor="email">Email</label>
-                    <input type="email" onChange={this.onChange} name="email" placeholder="john.doe@gmail.com"/>     
-                  </div>
-                  <div className = "loginformgroup ">
-                    <label htmlFor="message">Message</label>
-                    <textarea rows = '4' cols = '50' className = "messagetext" onChange={this.onChange} />     
-                  </div>
-                </div>
-                <div className = "loginfooter">
-                  <button type= "button" className="loginbtn" onClick = {this.onSubmit}>
-                    Submit
-                  </button>
-                </div>
+      <div className = "mainlogin">
+      <div className = "container">
+        <Fade>
+        <div className="login-container">
+         
+          <div className = "logincontent">
+            <div className = "loginimage">
+              <img src = {logo} alt = 'https://www.freepik.com/free-photos-vectors/background" Background vector created by macrovector - www.freepik.com' />
+            </div>
+            <div className = "loginform">
+              <div className = "loginformgroup">
+                <label htmlFor="username">Username</label>
+                <input type="text" onChange={this.onChange} name="username" placeholder="username"/>     
+              </div>
+              <div className = "loginformgroup">
+                <label htmlFor="password">Password</label>
+                <input type="text" onChange={this.onChange} name="password" placeholder="********"/>     
               </div>
             </div>
-            </Zoom>
+            <div className = "loginfooter">
+              <button type= "button" className="loginbtn" onClick = {this.onSubmit}>
+                Submit
+              </button>
             </div>
-            </div>
+          </div>
+        </div>
+        </Fade>
+        </div>
+        </div>
      
     );
   } 

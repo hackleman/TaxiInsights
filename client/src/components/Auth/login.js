@@ -6,7 +6,7 @@ import { login } from '../../actions/auth';
 import { clearErrors } from '../../actions/error';
 import PropTypes from 'prop-types';
 import logo from '../../logos/login.svg';
-import Zoom from 'react-reveal/Zoom';
+import Fade from 'react-reveal/Fade';
 import './auth.scss';
 
 class Auth extends Component {
@@ -51,12 +51,12 @@ class Auth extends Component {
     return (
         <div className = "mainlogin">
           <div className = "container">
-            <Zoom>
+            <Fade>
             <div className="login-container">
-              <div className = "loginheader">Login</div>
+              
               <div className = "logincontent">
                 <div className = "loginimage">
-                  <img src = {logo} />
+                  <img src = {logo} alt = 'https://www.freepik.com/free-photos-vectors/background" Background vector created by macrovector - www.freepik.com' />
                 </div>
                 <div className = "loginform">
                   <div className = "loginformgroup">
@@ -78,7 +78,7 @@ class Auth extends Component {
                 </div>
               </div>
             </div>
-            </Zoom>
+            </Fade>
             </div>
             </div>
      

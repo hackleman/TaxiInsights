@@ -6,9 +6,9 @@ export default function Section({ title, color, page, id, dark }) {
 
   return (
         <Link to={page}>
-        <div className={"graphsection" + (dark ? " graphsection-dark" : "")} style = {{backgroundColor: color}}>
-            <div className="graphsection-content" id={id}>
-                <div className ={ "graphsection-text" }>
+        <div className={"mapsection" + (dark ? " mapsection-dark" : "")} style = {{backgroundColor: color}}>
+            <div className="mapsection-content" id={id}>
+                <div className ={ "mapsection-text" }>
                     <span className="border-title">
                     {title}
                     </span>

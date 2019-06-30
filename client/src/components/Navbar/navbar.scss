@@ -17,6 +17,10 @@
   
   .nav-items{
     margin: auto;
+
+    a:hover {
+      text-decoration: none;
+    }
   }
 
 
@@ -35,7 +39,12 @@
     display: inline;
     margin-left: 2rem;
     color: #333;
-  
+    
+
+  }
+
+  .activelink {
+    border-bottom: 1px solid #333;
   }
   
   .nav-item > .active {
