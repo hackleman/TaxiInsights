@@ -78,9 +78,9 @@ module.exports = {
         },
         geojson: {
             color: '#333',
-            weight: 1.5,
+            weight: .5,
             fillColor: "#fff2af",
-            fillOpacity: .4
+            fillOpacity: 0
         }
     },
     map4: { 
@@ -108,7 +108,7 @@ module.exports = {
             color: '#333',
             weight: 1,
             fillColor: "#fff2af",
-            fillOpacity: .4
+            fillOpacity: .3
         }
     },
 };

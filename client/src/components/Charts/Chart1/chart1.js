@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import Section from './Sections/sections';
+import Header from '../Headers/headers';
 import { Bar } from 'react-chartjs-2';
-import './chart1.css';
+import './chart1.scss';
 import chart1data from './data';
 
 class Chart1 extends Component {
@@ -32,12 +32,12 @@ class Chart1 extends Component {
     return (
       <div className = "chart1component">
         <div className = "chart1header">
-          <Section 
+          <Header 
               title="Chart"
               dark={true}
           />
           </div>
-          <div >
+          <div className = "chart1body">
             <Bar
               data={this.state.chartData}
               options={{

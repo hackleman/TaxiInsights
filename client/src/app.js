@@ -24,7 +24,7 @@ import Contact from './components/Contact/contact';
 
 // Styling
 import { CSSTransition,TransitionGroup } from 'react-transition-group';
-import './app.css';
+import './app.scss';
 
 class App extends Component {
 

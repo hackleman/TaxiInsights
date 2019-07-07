@@ -1,0 +1,16 @@
+
+.chart1component {
+  box-shadow: 14px 14px 14px 14px rgba(0, 0, 0, 0.3);
+  width: 100%;
+
+  .chart1header {
+    order: 0;
+  }
+
+  .chart1body {
+    box-shadow: 14px 10px 14px 14px rgba(0, 0, 0, 0.3);
+    height: 60vh;
+    width: 100%;
+  } 
+    
+}

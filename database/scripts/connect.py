@@ -3,11 +3,13 @@ import os
 import sys
 
 # connect to database
-conn = psycopg2.connect("host=localhost dbname=postgres user=postgres password=1234")
-cur = conn.cursor()
+# conn = psycopg2.connect("host=localhost dbname=postgres user=postgres password=1234")
+# cur = conn.cursor()
 
 def view(table):
     # VIEW A TABLE
+    conn = psycopg2.connect("host=localhost dbname=postgres user=postgres password=1234")
+    cur = conn.cursor()
     cur.execute('SELECT * FROM '+ table)
     all = cur.fetchall()
     print(all)
@@ -37,5 +39,5 @@ def insert(file, header=True, tablename=''):
 
 # delete('FHVTRIP')
 # view('FHVTRIP')
-insert('./data/fhvtrips.csv', header=False, tablename='FHVTRIP')
+view('zones')
 # createtable('FHVTRIP')

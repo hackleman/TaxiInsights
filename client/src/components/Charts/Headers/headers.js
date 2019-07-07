@@ -1,7 +1,7 @@
 import React from "react";
-import './sections.css';
+import './headers.scss';
 
-export default function Section({ title, dark }) {
+export default function Headers({ title, dark }) {
 
   return (
         <div className={"chartsection" + (dark ? " chart1section-dark" : "")}>

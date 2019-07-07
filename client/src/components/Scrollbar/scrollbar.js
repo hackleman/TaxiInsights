@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { Link as LinkScroll, animateScroll as scroll } from "react-scroll";
 
 import logo from '../../logos/now-black.svg';
-import './scrollbar.css';
+import './scrollbar.scss';
 
 class ScrollBar extends Component {
 

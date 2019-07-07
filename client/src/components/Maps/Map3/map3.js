@@ -5,7 +5,7 @@ import { connect } from 'react-redux';
 import Heading from '../Headers/headers';
 import config from '../assets/config.js';
 import geojson from '../assets/taxi.json';
-import './map3.css';
+import './map3.scss';
 
 
 class Map3 extends Component {
