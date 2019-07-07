@@ -25,6 +25,7 @@
     "react-scripts": "3.0.1",
     "react-scroll": "^1.7.12",
     "react-transition-group": "^4.1.1",
+    "react-slidedown": "^2.4.3",
     "reactstrap": "^7.1.0",
     "redux": "^4.0.1",
     "redux-thunk": "^2.3.0"
@@ -49,6 +50,6 @@
     ]
   },
   "devDependencies": {
-    "react-slidedown": "^2.4.3"
+   
   }
 }
