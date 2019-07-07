@@ -21,7 +21,10 @@
     "react-scripts": "3.0.1",
     "react-scroll": "^1.7.12",
     "react-transition-group": "^4.1.1",
-    "reactstrap": "^7.1.0"
+    "reactstrap": "^7.1.0",
+    "node-sass": "^4.12.0",
+    "redux": "^4.0.1",
+    "redux-thunk": "^2.3.0"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -43,8 +46,6 @@
     ]
   },
   "devDependencies": {
-    "node-sass": "^4.12.0",
-    "redux": "^4.0.1",
-    "redux-thunk": "^2.3.0"
+
   }
 }
