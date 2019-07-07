@@ -9,6 +9,7 @@ import PropTypes from 'prop-types';
 
 // Component imports
 import Home from './components/Home/home';
+import ScrollToTop from './components/Home/Scroll/scroll';
 import NavBar from './components/Navbar/navbar';
 import Footer from './components/Footer/footer';
 import Charts from './components/Charts/charts';
@@ -45,6 +46,7 @@ class App extends Component {
     return (
       <Provider store = {store}>
         <BrowserRouter>
+        <ScrollToTop>
         <Route render={({location}) => (
           <TransitionGroup>
             <CSSTransition
@@ -78,7 +80,7 @@ class App extends Component {
             </CSSTransition>
           </TransitionGroup>
             )} />
-            
+         </ScrollToTop>   
         </BrowserRouter>
       </Provider>
 
