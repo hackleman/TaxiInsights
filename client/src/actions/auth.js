@@ -16,7 +16,6 @@ import {
 
 export const loadUser = () => (dispatch, getState) => {
 
-
     // User loading
     dispatch({ type: USER_LOADING });
 
@@ -42,7 +41,6 @@ export const login = ({ username, password }) => dispatch => {
             'Content-Type': 'application/json'
         }
     }
-
     // Request body
     const body = JSON.stringify({ username, password });
 
@@ -91,6 +89,7 @@ export const logout = () => {
         type: LOGOUT_SUCCESS
     };
 };
+
 
 // Setup config/headers
 export const tokenConfig = getState => {

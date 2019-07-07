@@ -1,8 +1,11 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 import Fade from 'react-reveal/Fade';
-import logo from '../../logos/contact.svg';
 
+//Redux imports
+import { connect } from 'react-redux';
+import PropTypes from 'prop-types';
+import { closeMenu } from '../../actions/route';
 import '../Auth/auth.scss';
 
 class Contact extends Component {
@@ -13,6 +16,14 @@ class Contact extends Component {
     message: '',
     sent: false,
     
+  }
+  
+  static propTypes = {
+    closeMenu: PropTypes.func.isRequired
+  }
+
+  componentDidMount() {
+    this.props.closeMenu();
   }
 
   onChange = e => {
@@ -58,9 +69,6 @@ class Contact extends Component {
         <div className="login-container">
          
           <div className = "logincontent">
-            <div className = "loginimage">
-              <img src = {logo} alt = 'https://www.freepik.com/free-photos-vectors/background" Background vector created by macrovector - www.freepik.com' />
-            </div>
             <div className = "loginform">
               <div className = "loginformgroup">
                 <label htmlFor="username">Username</label>
@@ -86,4 +94,11 @@ class Contact extends Component {
   } 
 }
 
-export default Contact;
+const mapStateToProps = state => ({
+})
+
+export default connect(
+  mapStateToProps,
+  { closeMenu }
+)(Contact);
+

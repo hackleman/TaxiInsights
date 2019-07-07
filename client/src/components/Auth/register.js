@@ -3,9 +3,9 @@ import { Redirect, Link } from "react-router-dom";
 
 import { connect } from 'react-redux';
 import { register } from '../../actions/auth';
+import { setRegister, clearRoute } from '../../actions/route';
 import { clearErrors } from '../../actions/error';
 import PropTypes from 'prop-types';
-import logo from '../../logos/register.svg';
 import Fade from 'react-reveal/Fade';
 import './auth.scss';
 
@@ -25,7 +25,9 @@ class Register extends Component {
     isAuthenticated: PropTypes.bool,
     error: PropTypes.object.isRequired,
     register: PropTypes.func.isRequired,
-    clearErrors: PropTypes.func.isRequired
+    clearErrors: PropTypes.func.isRequired,
+    setRegister: PropTypes.func.isRequired,
+    clearRoute: PropTypes.func.isRequired
   }
 
   onChange = e => {
@@ -48,6 +50,13 @@ class Register extends Component {
     this.props.register(newUser);
   }
 
+  componentDidMount() {
+    this.props.setRegister();
+  }
+
+  componentWillUnmount() {
+    this.props.clearRoute();
+  }
 
   render() {
     
@@ -62,9 +71,6 @@ class Register extends Component {
           <div className="login-container registration">
           
             <div className = "logincontent">
-              <div className = "loginimage">
-                <img src = {logo} />
-              </div>
               <div className = "loginform">
                 <div className = "loginformgroup">
                   <label htmlFor="name">Name</label>
@@ -108,5 +114,5 @@ const mapStateToProps = state => ({
 
 export default connect(
   mapStateToProps,
-  { register, clearErrors }
+  { register, clearErrors, setRegister, clearRoute }
 )(Register);

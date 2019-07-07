@@ -17,7 +17,7 @@ class Home extends Component {
   render() {
 
     return (
-        <div class="landingpage">
+        <div className="landingpage">
  
              <ScrollBar />
              <Section 

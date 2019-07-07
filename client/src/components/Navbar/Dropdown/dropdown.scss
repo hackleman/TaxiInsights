@@ -1,0 +1,26 @@
+.dropdown {
+    background-color: #f7f4e9;
+    line-height: 1.6;
+    font-size: 1.4rem;
+    position: sticky;
+    top: 0px;
+    width: 100%;
+    // height: 8vh;
+    z-index: 2000;
+    box-shadow: 0 4px 14px 0 rgba(0, 0, 0, 0.3);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 2vh;
+
+    a:hover {
+        text-decoration: none;
+
+      }
+
+      .nav-item:hover{
+        border-bottom: 1px solid #333; 
+        color: #000000;
+      }
+}

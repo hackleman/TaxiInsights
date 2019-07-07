@@ -1,0 +1,112 @@
+.nav-mobile {
+    background-color: #f7f4e9;
+    line-height: 1.6;
+    font-size: 1.4rem;
+    position: sticky;
+    top: 0px;
+    width: 100%;
+    height: 8vh;
+    z-index: 2000;
+    box-shadow: 0 4px 14px 0 rgba(0, 0, 0, 0.3);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    display: none;
+
+    .nav-items-mobile{
+        margin: auto;
+    
+        a:hover {
+          text-decoration: none;
+        }
+      }
+
+    .nav-logo-mobile {
+    height: 60px;
+    width: 60px;
+    margin-left: 1rem;
+      
+    }
+    .nav-logo-mobile:hover {
+        cursor: pointer;
+    }
+
+    .menu-mobile {
+        margin-right: 1rem;
+    }
+    .menu-mobile:hover {
+
+        animation: tilt 2s linear;
+        cursor: pointer;
+    }
+    // $scaleMin : 0.4;
+    // $scaleMax : 1.3;
+    // $rotateStart : 0deg;
+    // $rotateMid : 225deg;
+    // $rotateEnd : 360deg;
+    @keyframes tilt{
+      0%{
+        transform: rotate(0deg);
+      }
+      50%{
+       transform:  rotate(225deg);
+
+
+      }
+      95%,100%{
+       transform: rotate(360deg);
+
+      }
+    }
+
+    
+
+  }
+
+@media (max-width: 732px){
+
+    .nav-mobile{
+        display: flex;
+    }
+    .nav {
+        display: none !important;
+    }
+}
+
+  
+
+
+
+  
+
+
+
+  .nav-item {
+    display: inline;
+    margin-left: 2rem;
+    color: #333;
+    
+
+  }
+
+  .activelink {
+    border-bottom: 1px solid #333;
+  }
+  
+  .nav-item > .active {
+      border-bottom: 1px solid #333;
+  }
+
+  .nav-item:hover {
+    color: black;
+    cursor: pointer;
+  }
+
+  .nav-item .hide {
+    display: none !important;
+  }
+
+  .hidden {
+    display: none !important;
+  }

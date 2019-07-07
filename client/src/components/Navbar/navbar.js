@@ -1,30 +1,38 @@
-import React, { Component, Fragment } from 'react';
-import { Link, withRouter } from 'react-router-dom';
+import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
 import { logout } from '../../actions/auth';
 import PropTypes from 'prop-types';
 
+// Component imports
+import MobileNavbar from './MobileNavbar/mobilenavbar';
+import Dropdown from './Dropdown/dropdown';
+import Authlink from './Fragments/authlinks';
+import Guestlink from './Fragments/guestlinks';
+
+// Styling imports
 import logo from '../../logos/logo.svg';
 import './navbar.scss';
 
 class NavBar extends Component {
 
     state = {
-        maps: false,
-        charts: false,
-        contact: false,
-        login: false,
-        register: false,
-        current: ''
+        maps: this.props.routes
     }
 
     static propTypes = {
         isAuthenticated: PropTypes.bool,
-        logout: PropTypes.func.isRequired
+        logout: PropTypes.func.isRequired,
+        login: PropTypes.bool,
+        register: PropTypes.bool
       }
 
   componentWillMount() {
+    this.setLocationStyle();
+  }
 
+
+  setLocationStyle = () => {
     let current = window.location.pathname
 
     if (current.startsWith('/contact')) {
@@ -36,45 +44,14 @@ class NavBar extends Component {
     } else if (current.startsWith('/maps')) {
         let maps = true
         this.setState({ maps });
-    } else if (current === '/login') {
-        let login = true
-        this.setState({ login });
-    } else if (current === '/register') {
-        let register = true
-        this.setState({ register });
     }
-
   }
 
   render() {
-        const guestLinks = (
-            <Fragment>
-                <Link to="/login">
-                    <li className={"nav-item" + (this.state.login ? " activelink" : "")}>
-                        Login
-                    </li>
-                </Link>
-                <Link to="/register">
-                    <li className={"nav-item" + (this.state.register ? " activelink" : "")}>
-                        Register
-                    </li>
-                </Link>
-            </Fragment>
-        )
-
-        const authLinks = (
-            <Fragment> 
-                <Link to="/login">
-                <li className="nav-item" onClick = {this.props.logout}>
-                        Logout
-                        </li>
-                </Link>
-            </Fragment>
-        )
-
         return (
+            <div>
             <nav className="nav" id="navbar">
-                <ul className="nav-items">
+                <ul className="nav-items">     
                     <Link to="/">
                         <img
                         src={logo}
@@ -99,15 +76,20 @@ class NavBar extends Component {
                     </Link>
                 </ul>
                 <ul className="nav-items">
-                  {this.props.isAuthenticated ? authLinks: guestLinks}  
+                  {this.props.isAuthenticated ? <Authlink />: <Guestlink />}
                 </ul>
             </nav>
+            <MobileNavbar />
+            <Dropdown />
+            </div>
         )
   }
 }
 
 const mapStateToProps = state => ({
   isAuthenticated: state.auth.isAuthenticated,
+  login: state.route.login,
+  register: state.route.register
 })
 
 export default connect(

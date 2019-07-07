@@ -34,6 +34,10 @@ class App extends Component {
 
   componentDidMount() {
     store.dispatch(loadUser());
+    
+  }
+  componentDidUpdate() {
+    
   }
 
   render() {

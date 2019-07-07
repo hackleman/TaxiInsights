@@ -1,0 +1,26 @@
+.guest-fragment {
+    display: flex;
+    flex-direction: row;
+    
+
+}
+.stacked { 
+  flex-direction: column !important;
+}
+  a:hover {
+      background-color: none;
+}
+
+  .dropdown-item {
+    display: inline;
+    margin-left: 2rem;
+    color: #333;
+
+  }
+
+
+  .dropdown-item:hover {
+    cursor: pointer;
+    background-color: none !important;
+    
+  }
