@@ -2,6 +2,7 @@ import React, { Component, Fragment } from 'react';
 import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
 import { logout } from '../../../actions/auth';
+import { closeMenu } from '../../../actions/route';
 import PropTypes from 'prop-types';
 
 class Authlink extends Component {
@@ -12,7 +13,8 @@ class Authlink extends Component {
     static propTypes = {
         isAuthenticated: PropTypes.bool,
         menu: PropTypes.bool,
-        logout: PropTypes.func.isRequired
+        logout: PropTypes.func.isRequired,
+        closeMenu: PropTypes.func.isRequired
       }
 
   componentWillMount() {
@@ -41,6 +43,6 @@ const mapStateToProps = state => ({
 
 export default connect(
   mapStateToProps,
-  { logout }
+  { logout, closeMenu }
 )(Authlink);
 

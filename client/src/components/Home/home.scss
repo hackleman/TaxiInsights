@@ -16,6 +16,7 @@
 
 .sectioncontainer a:hover {
   color: white !important;
+  text-decoration: none !important;
 }
 
 .section-dark {
@@ -43,7 +44,7 @@
   color: #fff;
   padding: 20px;
   border-color: #111 !important;
-  font-size: 37px;
+  font-size: 27px;
   letter-spacing: 8px;
   text-transform: uppercase;
 }
@@ -62,16 +63,50 @@
 }
 
 .centertitle {
-  padding-top: 4vh !important;
+  padding: 3vh !important;
 }
 
 .headertitle {
   height: 84vh !important;
 }
 
+@media (max-width: 732px){
+
+  .section-text .border-title {
+    background-color: #111;
+    color: #fff;
+    padding: 10px;
+    border-color: #111 !important;
+    font-size: 17px;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+  }
+
+  .section-text .border {
+    background-color: #111;
+    color: #fff;
+    padding: 5vh;
+    border-color: #111 !important;
+    font-size: 15px;
+    letter-spacing: 2px;
+  }
+
+  .headertitle {
+    height: 100vh !important;
+  }
+
+  .centertitle {
+    padding-top: 0 !important;
+    padding-bottom: 3vh;
+  }
+
+}
+
 /*
+
  Options passed to Sections function
-  */
+
+*/
 
 .notextstyle {
   height: 33vh; 
@@ -85,6 +120,12 @@
 .nobody {
   display: none !important;
 }
+
+/* 
+
+Styling for individual background images
+
+*/
 
 .chartimg {
   background-image: url('./images/05.svg')  !important;

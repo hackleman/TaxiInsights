@@ -35,8 +35,6 @@
       display: inline;
       margin-left: 2rem;
       color: #333;
-      
-  
     }
   
     .activelink {
@@ -48,6 +46,7 @@
     }
   
     .nav-item:hover {
+      border-bottom: 1px solid #333;
       color: black;
       cursor: pointer;
     }

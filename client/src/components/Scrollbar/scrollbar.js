@@ -15,6 +15,7 @@ class ScrollBar extends Component {
 
   render() {
     return (
+      
       <nav className="scroll" id="scrollbar">
       <div className="scroll-content">
 
@@ -67,6 +68,7 @@ class ScrollBar extends Component {
         </ul>
       </div>
     </nav>
+
     )
   }
 }

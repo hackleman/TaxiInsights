@@ -10,3 +10,8 @@
     height: 10vh;
 
 }
+@media (max-width: 732px){
+    .myfooter {
+        padding-bottom: 12vh;
+    }
+}

@@ -3,6 +3,7 @@
 :root {
     --off-white: #fafafa;
     min-height: 100% !important;
+    
   }
   body {
     margin: 0;
@@ -12,12 +13,14 @@
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     min-height: 100vh !important;
-
+    background: #fafafa;
+    
+   
   }
 
 #root {
   min-height: 100vh !important;
-
+  background: #fafafa;
 }
   
 .App {
@@ -27,6 +30,7 @@
   display: flex;
   flex-direction: column;
   position: absolute;
+  background: #fafafa;
 }
 
 

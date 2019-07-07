@@ -2,20 +2,8 @@ import React, { Component } from 'react';
 import Section from './Sections/sections';
 import './mapindex.scss';
 
-//Redux imports
-import { connect } from 'react-redux';
-import PropTypes from 'prop-types';
-import { closeMenu } from '../../actions/route';
-
 class MapIndex extends Component {
 
-    static propTypes = {
-        closeMenu: PropTypes.func.isRequired
-        }
-
-    componentDidMount() {
-    this.props.closeMenu();
-    }
     render() {
         return (
             <div className = "mapindex">
@@ -51,11 +39,5 @@ class MapIndex extends Component {
   
 }
 
-const mapStateToProps = state => ({
-})
 
-export default connect(
-  mapStateToProps,
-  { closeMenu }
-)( MapIndex );
-
+export default MapIndex;

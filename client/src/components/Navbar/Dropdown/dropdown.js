@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
 import { logout } from '../../../actions/auth';
+import { closeMenu } from '../../../actions/route';
 import PropTypes from 'prop-types';
 import { SlideDown } from 'react-slidedown';
 import Authlink from '../Fragments/authlinks';
@@ -35,15 +36,15 @@ class Dropdown extends Component {
                 {this.props.menu &&(
                     <nav className="dropdown">
                             <Link to="/charts">
-                                <li className={"nav-item" + (this.state.charts ? " activelink" : "")}>
+                                <li onClick = {this.close} className={"nav-item" + (this.state.charts ? " activelink" : "")}>
                                     Charts </li>
                             </Link>
                             <Link to="/maps">
-                                <li className={"nav-item" + (this.state.maps ? " activelink" : "")}>
+                                <li onClick = {this.close} className={"nav-item" + (this.state.maps ? " activelink" : "")}>
                                     Maps </li>
                             </Link>
                             <Link to="/contact">
-                                <li className={"nav-item" + (this.state.contact ? " activelink" : "")}>
+                                <li onClick = {this.close} className={"nav-item" + (this.state.contact ? " activelink" : "")}>
                                     Contact Me </li>
                             </Link>
                             {this.props.isAuthenticated ? <Authlink />: <Guestlink menu = {true}/>}         
@@ -61,6 +62,6 @@ const mapStateToProps = state => ({
 
 export default connect(
   mapStateToProps,
-  { logout }
+  { logout, closeMenu }
 )(Dropdown);
 

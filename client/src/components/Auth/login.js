@@ -1,12 +1,23 @@
 import React, {Component} from 'react';
-import { Redirect, Link } from "react-router-dom";
+import { Redirect } from "react-router-dom";
 
+// Redux imports
 import { connect } from 'react-redux';
 import { login } from '../../actions/auth';
 import { clearErrors } from '../../actions/error';
 import { setLogin, clearRoute } from '../../actions/route';
 import PropTypes from 'prop-types';
+
+// Styling imports 
+import {
+  Container, Col, Form,
+  FormGroup, Label, Input,
+  Button, Card, Badge, InputGroup, 
+  InputGroupAddon
+} from 'reactstrap';
 import Fade from 'react-reveal/Fade';
+import { faKey, faEnvelope } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import './auth.scss';
 
 class Auth extends Component {
@@ -59,40 +70,61 @@ class Auth extends Component {
     }
 
     return (
-        <div className = "mainlogin">
-          <div className = "container">
-            <Fade>
-            <div className="login-container">
-              
-              <div className = "logincontent">
-                {/* <div className = "loginimage">
-                  <img src = {logo} alt = 'https://www.freepik.com/free-photos-vectors/background" Background vector created by macrovector - www.freepik.com' />
-                </div> */}
-                <div className = "loginform">
-                  <div className = "loginformgroup">
-                    <label htmlFor="username">Username</label>
-                    <input type="text" onChange={this.onChange} name="username" placeholder="username"/>     
-                  </div>
-                  <div className = "loginformgroup">
-                    <label htmlFor="password">Password</label>
-                    <input type="text" onChange={this.onChange} name="password" placeholder="********"/>     
-                  </div>
-                </div>
-                <div className = "loginfooter">
-                  <button type= "button" className="loginbtn" onClick = {this.onSubmit}>
-                    Submit
-                  </button>
-                  <button type= "button" className="loginbtn register" onClick = {this.onSubmit}>
-                  <Link to='/register'>Register</Link> 
-                  </button>
-                </div>
-              </div>
-            </div>
-            </Fade>
-            </div>
-            </div>
-     
 
+      <Container className="Login-container">
+        <Fade>
+        <Card className="Card">
+        <Badge className = "Header" color="secondary">Sign In</Badge>
+          <Form className="Form">
+            <Col>
+              <FormGroup className = "Formgroup">
+                <Label className = "label">Email</Label>
+                <InputGroup>
+                  <InputGroupAddon addonType="prepend">
+                  <Button className = "Button-prepend" color="bg-light" >
+                        <span>
+                          <FontAwesomeIcon icon={faEnvelope} />
+                        </span>
+                      </Button>
+                  </InputGroupAddon>
+                  <Input className = "Email-form"
+                    type="email"
+                    name="username"
+                    id="Email"
+                    placeholder="busystudent@email.com"
+                    onChange={this.onChange}
+                  />
+                </InputGroup>
+
+              </FormGroup>
+            </Col>
+            <Col >
+              <FormGroup className = "Formgroup">
+                <Label className = "label" for="examplePassword">Password</Label>
+                <InputGroup>
+                    <InputGroupAddon addonType="prepend">
+                      <Button className = "Button-prepend" color="bg-light" >
+                          <span>
+                            <FontAwesomeIcon icon={faKey} />
+                          </span>
+                        </Button>
+                    </InputGroupAddon>
+                    <Input className = "Password-form"
+                      type="password"
+                      name="password"
+                      id="examplePassword"
+                      placeholder="********"
+                      onChange={this.onChange}
+                    />
+                </InputGroup>
+              </FormGroup>
+            </Col>
+            <Button onClick = {this.onSubmit} outline color="primary" size = "md" className = "Submit-mobile">Submit</Button>
+            <Button onClick = {this.onSubmit} outline color="primary" size = "lg" className = "Submit-desktop">Submit</Button>
+          </Form>
+        </Card>
+        </Fade>
+      </Container>
   );
   }
 }

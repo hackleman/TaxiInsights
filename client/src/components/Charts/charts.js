@@ -2,20 +2,7 @@ import React, { Component } from 'react';
 import Section from './Sections/sections';
 import './charts.scss';
 
-//Redux imports
-import { connect } from 'react-redux';
-import PropTypes from 'prop-types';
-import { closeMenu } from '../../actions/route';
-
 class Charts extends Component {
-
-  static propTypes = {
-    closeMenu: PropTypes.func.isRequired
-  }
-
-  componentDidMount() {
-    this.props.closeMenu();
-  }
 
   render() {
     return (
@@ -49,11 +36,5 @@ class Charts extends Component {
   }
 };
 
-const mapStateToProps = state => ({
-})
-
-export default connect(
-  mapStateToProps,
-  { closeMenu }
-)(Charts);
+export default Charts;
 

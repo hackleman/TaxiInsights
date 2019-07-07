@@ -1,140 +1,104 @@
-.Login {
-    height: 40vh;
-    margin-top: 10vh;
-  }
-
-  .Login-header {
-      margin-bottom: 5vh !important;
-  }
-
-  .Login-button {
-    margin-top: 5vh !important;
-  }
-
-.mainlogin {
-  align-self: center;
-}
-.container{
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-}
-.registration {
-   margin-top: 1rem !important;
- }
- .messages {
-   margin-top: .75rem !important;
- }
-
-.login-container {
-
-  background-color: #fff;
-  box-shadow: 0px 0px 24px 4px rgba(15, 15, 15, 0.2);
-  border-radius: 8px;
-  position: relative;
-  z-index: 99;
-  width: 60%;
-  min-width: 500px;
-  height: 100%;
-  z-index: 99;
-  padding: 17px 10px;
-  padding-bottom: 3rem;
-  padding-top: 3rem;
+.Login-container {
+  
   display: flex;
   flex-direction: column;
-  align-items: center;
+  width: inherit;
+  margin-top: 25vh;
+  font-size: 2rem;
 
-
-  .loginheader {
-    font-size: 24px;
-    margin-bottom: 10px;
-    font-family: "Open Sans", sans-serif;
+  .Register{
+    margin-top: -10vh;
   }
+  .Card {
+    padding: 20px 20px;
+    background-color: #f8f9fa;
+    margin-bottom: 15vh;
+    box-shadow: 0 4px 14px 0 rgba(0, 0, 0, 0.3);
+    border-radius: 12px;
 
-  .logincontent {
+    .Header {
+      width: 25%;
+      padding: 10px;
+      margin-bottom: 1rem;
+    }
+  }
+  .Login {
     display: flex;
     flex-direction: column;
 
-    .loginimage {
-      width: 21em;
-      img {
-        width: 10rem;
-        height: 10rem;
-      }
+    padding: 10px 50px;
+    width: 100% !important;
+
+    h2 {
+      align-self: flex-start;
     }
 
-    .loginform {
-      margin-top: 2em;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
+  }
 
-      .loginformgroup {
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-        width: fit-content;
-        label {
-          font-size: 20px;
-        }
-
-        input {
-          margin-top: 6px;
-          min-width: 18em;
-          height: 37px;
-          padding: 0px 10px;
-          font-size: 16px;
-          font-family: 'Open Sans', sans-serif;
-          background-color: #f3f3f3;
-          border: 0;
-          border-radius: 4px;
-          margin-bottom: 31px;
-          transition: all 250ms ease-in-out;
-          &:focus {
-            outline: none;
-            box-shadow: 0px 0px 12px 0.8px #0e81ce96;
-          }
-        }
-      }
-    }
-
-    .loginfooter {
-      margin-left: 50px;
-      margin-right: 50px;
-      display: flex;
-      flex-direction: row;
-      justify-content: space-evenly;
-    }
-
-    .loginbtn {
-      font-size: 21px;
-      padding: 5px 20px;
-      border: 0;
-      background-color: #3498db;
-      color: #fff;
-      border-radius: 3px;
-      transition: all 250ms ease-in-out;
-      cursor: pointer;
-      &:hover {
-        background-color: #2386c8;
-      }
-      &:focus {
-        outline: none;
-      }
-      a {color: white !important; }
-      a:hover { color: white !important; }
-    }
-    
-    .register{
-      background-color: #bebebe;
-      color: #fff;
-      &:hover {
-        background-color: #989898;
-      }
-      &:focus {
-        outline: none;
-      }
+  .Formgroup {
+    display: flex;
+    flex-direction: column;
+    .label {
+      align-self: start;
     }
   }
+
+  .text-area {
+    height: 100px;
+  }
+  .Submit-mobile {
+    display: none !important
+  }
+
+
+
+
   
+}
+
+@media (max-width: 732px){
+
+  .Login-container{
+
+    margin-top: 10vh;
+    font-size: 1.5rem;
+
+    .Register{
+      margin-top: 0vh;
+    }
+
+    .Header {
+      width: 25%;
+      padding: 10px;
+    }
+
+    .Login {
+      display: flex;
+      flex-direction: column;
+      align-self: flex-start;
+      margin-top: 10vh;
+      padding: 30px 40px;
+      width: 80%;
+    }
+
+    .Card {
+      padding: 20px 20px;
+      margin-bottom: 15vh;
+      box-shadow: 0 4px 14px 0 rgba(0, 0, 0, 0.3);
+      border-radius: 12px;
+
+      .Header {
+        width: 50%;
+        padding: 10px;
+        margin-bottom: 1rem;
+      }
+    }
+
+    .Submit-mobile {
+      display: inline !important;
+    }
+    .Submit-desktop {
+      display: none !important;
+    }
+  }
 }

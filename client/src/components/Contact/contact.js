@@ -1,11 +1,23 @@
 import React, { Component } from 'react';
 import axios from 'axios';
-import Fade from 'react-reveal/Fade';
 
-//Redux imports
-import { connect } from 'react-redux';
-import PropTypes from 'prop-types';
-import { closeMenu } from '../../actions/route';
+// Import redux components
+// import { connect } from 'react-redux';
+// import { register } from '../../actions/auth';
+// import { setRegister, clearRoute } from '../../actions/route';
+// import { clearErrors } from '../../actions/error';
+// import PropTypes from 'prop-types';
+
+// Import styling
+import {
+  Container, Col, Form,
+  FormGroup, Label, Input,
+  Button, Card, Badge, InputGroup, 
+  InputGroupAddon
+} from 'reactstrap';
+import Fade from 'react-reveal/Fade';
+import { faParagraph, faEnvelope, faUser } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import '../Auth/auth.scss';
 
 class Contact extends Component {
@@ -16,14 +28,6 @@ class Contact extends Component {
     message: '',
     sent: false,
     
-  }
-  
-  static propTypes = {
-    closeMenu: PropTypes.func.isRequired
-  }
-
-  componentDidMount() {
-    this.props.closeMenu();
   }
 
   onChange = e => {
@@ -63,42 +67,92 @@ class Contact extends Component {
 
   render() {
     return (
-      <div className = "mainlogin">
-      <div className = "container">
-        <Fade>
-        <div className="login-container">
-         
-          <div className = "logincontent">
-            <div className = "loginform">
-              <div className = "loginformgroup">
-                <label htmlFor="username">Username</label>
-                <input type="text" onChange={this.onChange} name="username" placeholder="username"/>     
-              </div>
-              <div className = "loginformgroup">
-                <label htmlFor="password">Password</label>
-                <input type="text" onChange={this.onChange} name="password" placeholder="********"/>     
-              </div>
-            </div>
-            <div className = "loginfooter">
-              <button type= "button" className="loginbtn" onClick = {this.onSubmit}>
-                Submit
-              </button>
-            </div>
-          </div>
-        </div>
-        </Fade>
-        </div>
-        </div>
-     
-    );
+ 
+
+      
+      <Container className="Login-container">
+      <div className = "Register">
+      <Fade>
+      <Card className="Card">
+      <Badge className = "Header" color="secondary">Contact Me</Badge>
+        <Form className="Form">
+        <Col>
+            <FormGroup className = "Formgroup">
+              <Label className = "label">Name</Label>
+              <InputGroup>
+                <InputGroupAddon addonType="prepend"> 
+                  <Button color="bg-light" className = "Button-prepend">
+                      <span>
+                        <FontAwesomeIcon icon={faUser} />
+                      </span>
+                    </Button>
+                </InputGroupAddon>
+                <Input
+                  type="name"
+                  name="name"
+                  id="name"
+                  placeholder="John Doe"
+                  onChange={this.onChange}
+                />
+              </InputGroup>
+            </FormGroup>
+          </Col>
+
+          <Col>
+            <FormGroup className = "Formgroup">
+              <Label className = "label">Email</Label>
+              <InputGroup>
+                <InputGroupAddon addonType="prepend">
+                  <Button className = "Button-prepend" color="bg-light" >
+                      <span>
+                        <FontAwesomeIcon icon={faEnvelope} />
+                      </span>
+                    </Button>
+                </InputGroupAddon>
+                <Input
+                  type="email"
+                  name="email"
+                  id="exampleEmail"
+                  placeholder="busystudent@email.com"
+                  onChange={this.onChange}
+                />
+              </InputGroup>
+            </FormGroup>
+          </Col>
+          <Col>
+            <FormGroup className = "Formgroup">
+              <Label className = "label">Message</Label>
+              <InputGroup>
+                <InputGroupAddon addonType="prepend"> 
+                  <Button color="bg-light" className = "Button-prepend">
+                      <span>
+                        <FontAwesomeIcon icon={faParagraph} />
+                      </span>
+                    </Button>
+                </InputGroupAddon>
+                <Input
+                  type="textarea"
+                  name="msg"
+                  id="message"
+                  placeholder="Hello World~"
+                  className = "text-area"
+                  onChange={this.onChange}
+                />
+              </InputGroup>
+            </FormGroup>
+          </Col>
+          <Button onClick = {this.onSubmit} outline color="primary" size = "md" className = "Submit-mobile">Submit</Button>
+          <Button onClick = {this.onSubmit} outline color="primary" size = "lg" className = "Submit-desktop">Submit</Button>
+        </Form>
+      </Card>
+      </Fade>
+      </div>
+    </Container>
+
+    
+    )
   } 
 }
 
-const mapStateToProps = state => ({
-})
-
-export default connect(
-  mapStateToProps,
-  { closeMenu }
-)(Contact);
+export default Contact;
 

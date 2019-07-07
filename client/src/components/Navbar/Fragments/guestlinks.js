@@ -1,6 +1,7 @@
 import React, { Component, Fragment } from 'react';
 import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
+import { closeMenu } from '../../../actions/route';
 import PropTypes from 'prop-types';
 import './navfragment.scss';
 
@@ -18,7 +19,8 @@ class Guestlink extends Component {
     static propTypes = {
         isAuthenticated: PropTypes.bool,
         menu: PropTypes.bool,
-        login: PropTypes.bool
+        login: PropTypes.bool,
+        closeMenu: PropTypes.func.isRequired
       }
 
   render() {
@@ -27,12 +29,12 @@ class Guestlink extends Component {
             <div className = 'nav-items'>
                 <div className = {'guest-fragment' + (this.state.menu ? ' stacked': '')}>
                     <Link to="/login">
-                        <li className={"nav-item" + (this.props.login ? " activelink" : "")}>
+                        <li onClick = {this.props.closeMenu} className={"nav-item" + (this.props.login ? " activelink" : "")}>
                             Login
                         </li>
                     </Link>
                     <Link to="/register">
-                        <li className={"nav-item" + (this.props.register ? " activelink" : "")}>
+                        <li onClick = {this.props.closeMenu} className={"nav-item" + (this.props.register ? " activelink" : "")}>
                             Register
                         </li>
                     </Link>
@@ -51,6 +53,6 @@ const mapStateToProps = state => ({
 
 export default connect(
   mapStateToProps,
-  {  }
+  { closeMenu }
 )(Guestlink);
 
