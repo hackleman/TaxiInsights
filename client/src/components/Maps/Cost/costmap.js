@@ -139,7 +139,7 @@ class CostMap extends Component {
   filter() {
     let current = this;
 
-    axios.get('http://cf790377.ngrok.io/data/costhour/' + current.state.categoryFilter.toString())
+    axios.get('https://b3e76ab6.ngrok.io/data/costhour/' + current.state.categoryFilter.toString())
     .then(function (response) {
       current.mapdata = response;
     })
