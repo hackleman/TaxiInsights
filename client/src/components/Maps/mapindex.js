@@ -8,9 +8,9 @@ class MapIndex extends Component {
         return (
             <div className = "mapindex">
                 <Section 
-                    title="Map 1"
+                    title="Average Cost by Hour"
                     dark={false}
-                    page = "/maps/1"
+                    page = "/maps/costmap"
                     color = '#FFF2AF'
                 />
                 <Section 

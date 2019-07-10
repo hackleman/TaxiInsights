@@ -6,6 +6,7 @@ const trips = require('../database/queries/trips');
 router.get('/zones', zones.getZones);
 router.get('/zones/:id', zones.getZone);
 router.get('/yellowtrip', trips.getYellowTrips);
+router.get('/costhour/:id', trips.getCostHour);
 router.get('/yellowtrip/:id', trips.getYellowTrip);
 router.get('/greentrip', trips.getGreenTrips);
 router.get('/greentrip/:id', trips.getGreenTrip);

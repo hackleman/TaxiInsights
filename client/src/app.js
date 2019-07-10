@@ -15,7 +15,7 @@ import Footer from './components/Footer/footer';
 import Charts from './components/Charts/charts';
 import Chart1 from './components/Charts/Chart1/chart1';
 import Maps from './components/Maps/mapindex';
-import Map1 from './components/Maps/Map1/map1';
+import CostMap from './components/Maps/Cost/costmap';
 import Map2 from './components/Maps/Map2/map2';
 import Map3 from './components/Maps/Map3/map3';
 import Map4 from './components/Maps/Map4/map4';
@@ -65,7 +65,7 @@ class App extends Component {
                         <Chart1 legendPosition="top"/>
                       )} /> 
                     <Route exact path="/maps" component={Maps} />
-                    <Route exact path="/maps/1"  component={Map1} />
+                    <Route exact path="/maps/costmap"  component={CostMap} />
                     <Route exact path="/maps/2"  component={Map2} />
                     <Route exact path="/maps/3"  component={Map3} />
                     <Route exact path="/maps/4"  component={Map4} />

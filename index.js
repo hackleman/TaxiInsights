@@ -1,5 +1,5 @@
 const main = require('./services/server.js');
-// const postgres = require('./services/database.js');
+const postgres = require('./services/database.js');
 
 async function start() {
   console.log("Starting main app..");
@@ -11,18 +11,18 @@ async function start() {
   }
 }
 
-// async function startpostgres() {
-//   console.log("Starting postgres.. ");
-//   try {
-//     await postgres.initialize();
-//   } catch (err) {
-//     console.error(err);
-//     process.exit(1);
-//   }
-// }
+async function startpostgres() {
+  console.log("Starting postgres.. ");
+  try {
+    await postgres.initialize();
+  } catch (err) {
+    console.error(err);
+    process.exit(1);
+  }
+}
 
 start();
-// startpostgres();
+startpostgres();
 
 
 async function shutdown(e) {
@@ -30,12 +30,12 @@ async function shutdown(e) {
   let err = e;
   console.log('Shutting down');
 
-  // try {
-  //   await postgres.close();
-  // } catch (e) {
-  //   console.log('Encountered error', e);
-  //   err = err || e;
-  // }
+  try {
+    await postgres.close();
+  } catch (e) {
+    console.log('Encountered error', e);
+    err = err || e;
+  }
 
   try {
     await main.close();
