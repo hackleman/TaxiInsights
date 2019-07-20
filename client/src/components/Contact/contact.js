@@ -1,13 +1,6 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 
-// Import redux components
-// import { connect } from 'react-redux';
-// import { register } from '../../actions/auth';
-// import { setRegister, clearRoute } from '../../actions/route';
-// import { clearErrors } from '../../actions/error';
-// import PropTypes from 'prop-types';
-
 // Import styling
 import {
   Container, Col, Form,
@@ -16,7 +9,7 @@ import {
   InputGroupAddon
 } from 'reactstrap';
 import Fade from 'react-reveal/Fade';
-import { faParagraph, faEnvelope, faUser } from "@fortawesome/free-solid-svg-icons";
+import { faParagraph, faUser } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import '../Auth/auth.scss';
 
@@ -92,28 +85,6 @@ class Contact extends Component {
                   name="name"
                   id="name"
                   placeholder="John Doe"
-                  onChange={this.onChange}
-                />
-              </InputGroup>
-            </FormGroup>
-          </Col>
-
-          <Col>
-            <FormGroup className = "Formgroup">
-              <Label className = "label">Email</Label>
-              <InputGroup>
-                <InputGroupAddon addonType="prepend">
-                  <Button className = "Button-prepend" color="bg-light" >
-                      <span>
-                        <FontAwesomeIcon icon={faEnvelope} />
-                      </span>
-                    </Button>
-                </InputGroupAddon>
-                <Input
-                  type="email"
-                  name="email"
-                  id="exampleEmail"
-                  placeholder="busystudent@email.com"
                   onChange={this.onChange}
                 />
               </InputGroup>

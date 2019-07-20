@@ -16,11 +16,14 @@
     box-shadow: 0 4px 14px 0 rgba(0, 0, 0, 0.3);
     border-radius: 12px;
 
+
     .Header {
-      width: 25%;
+      float: left;
+      width: 33%;
       padding: 10px;
       margin-bottom: 1rem;
     }
+
   }
   .Login {
     display: flex;
@@ -44,7 +47,7 @@
   }
 
   .text-area {
-    height: 100px;
+    height: 250px;
   }
   .Submit-mobile {
     display: none !important

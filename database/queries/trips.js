@@ -39,21 +39,6 @@ const getYellowTrip = (req, res) => {
   })
 }
 
-const getCostHour = (req, res) => {
-
-  let id = parseInt(req.params.id);
-  if (isNaN(id)) id = 0;
-  
-  let newquery = 'SELECT AVG(TOTALCOST), PICKUPZONE FROM YELLOWTRIP WHERE extract(hour FROM PICKUPTIME) = $1 GROUP BY PICKUPZONE';
-  
-  pool.query(newquery, [id], (err, results) => {
-    if (err) {
-      throw err
-    }
-    res.status(200).json(results.rows);
-  })
-}
-
 const getGreenTrips = (req, res) => {
     // query first 10,000 until stream is implemented
     pool.connect((err, client, done) => {
@@ -112,7 +97,6 @@ pool.query('SELECT * FROM FHVTRIP WHERE TRIPID = $1', [id], (err, results) => {
 module.exports = {
   getYellowTrips,
   getYellowTrip,
-  getCostHour,
   getGreenTrips,
   getGreenTrip,
   getFHVTrips,

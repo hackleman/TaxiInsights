@@ -1,0 +1,260 @@
+// Page 
+.CostMapHeader {
+    order: 0;
+  }
+.CostMapComponent {
+  box-shadow: 14px 14px 14px 14px rgba(0, 0, 0, 0.3);
+  width: 100%;
+
+}
+
+// Filter UI
+.filterHours {
+  position: absolute;
+  top: 35vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  z-index: 10000;
+  height: 30vh;
+  width: 30%;
+  opacity: 1;
+  background: hsla(0,100%,100%,0.8);
+  margin: 10px;
+  font-family: Helvetica, sans-serif;
+  font-weight: 500;
+  font-size: 13px;
+  padding: 5px;
+  padding-bottom: 10px;
+  padding: 20px 20px;
+  background-color: #f8f9fa;
+  box-shadow: 0 4px 14px 0 rgba(0, 0, 0, 0.3);
+  border-radius: 12px;
+
+  .Header-container{
+    .Header {
+      padding: 20px 20px;
+      box-shadow: 0 4px 14px 0 rgba(0, 0, 0, 0.3);
+      border-radius: 12px;
+      height: 5vh;
+      margin-top: -5vh;
+      width: 75%;
+      padding: 10px;
+      margin-bottom: .5rem;
+      font-size: 1.5rem;
+    }
+  }
+  h3 {
+    margin-top: 0;
+    padding-left: 5px;
+  }
+  p {
+    padding-left: 5px;
+    width: 100%;
+  }
+  .p-mobile {
+    display: none;
+  }
+  .fil
+  select {
+    display: block;
+    margin: 0 auto;
+  }
+}
+
+// Modal buttons hidden
+.MobileFilter  {
+  display: none;
+}
+.Legend-Modal {
+  display: none;
+  z-index: 10000;
+}
+
+.LegendModal {
+  display: none;
+}
+
+// Map and animations
+.leaflet-container {
+  box-shadow: 24px 4px 14px 14px rgba(0, 0, 0, 0.3);
+  height: 60vh;
+  width: 100%;
+}
+.leaflet-container path{ 
+  transition: fill .8s ease;
+}
+.filterHours hr {
+  border: 1px solid #000;
+  margin: 5px;
+}
+
+// Modal
+.CostModal {
+  top: 10vh;
+  display: flex;
+
+
+  .Header-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+
+    .Header{
+      padding: 20px 20px;
+      box-shadow: 0 4px 14px 0 rgba(0, 0, 0, 0.3);
+      border-radius: 12px;
+      width: 75%;
+      padding: 10px;
+      margin: 2rem 0;
+      font-size: 1.5rem;
+    }
+  }
+  .Slider-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-bottom: 2rem;
+  }
+
+  .Footer-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+}
+
+// Legend
+.Legend {
+  position: absolute;
+  top: 65vh;
+  right: 0vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  z-index: 10000;
+  opacity: .9;
+  background: hsla(0,100%,100%,0.8);
+  margin: 10px;
+  font-family: Helvetica, sans-serif;
+  font-weight: 500;
+  font-size: 13px;
+  padding: 0px 20px;
+  background-color: #f8f9fa;
+  box-shadow: 0 4px 14px 0 rgba(0, 0, 0, 0.3);
+  border-radius: 12px;
+  width: 25%;
+
+  h3 {
+    font-family: Helvetica, sans-serif;
+    font-weight: 500;
+    font-size: 26px;
+  }
+  .block {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    .legend1 {
+      height: 20px;
+    }
+    .legend2 {
+      height: 20px;
+    }
+    .legend3 {
+      height: 20px;
+    }
+  }
+}
+
+.LegendModal {
+  top: 60vh;
+  right: 5vh;
+}
+
+// Tablet
+  @media (max-width: 732px){
+    .filterHours {
+      top: 40vh;
+      height: 30vh;
+      width: 200px;
+
+      .Header-container{
+        .Header {
+          display: none;
+        }
+      }
+      .Button {
+        padding-top: 10px;
+      }
+    }
+  }
+
+// Phone
+  @media (max-width: 432px){
+    .filterHours {
+      display: none;
+    }
+
+    .MobileFilter {
+      position: absolute;
+      top: 38vh;
+      left: 10px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      z-index: 1000;
+      background: hsla(0,100%,100%,0.8);
+      font-family: Helvetica, sans-serif;
+      box-shadow: 0 4px 14px 0 rgba(0, 0, 0, 0.3);
+      border-radius: 12px; 
+    }
+    .Legend {
+      display: none;
+    }
+
+    .Legend-Modal {
+      position: absolute;
+      bottom: 18vh;
+      right: 10px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      z-index: 100000;
+      background: hsla(0,100%,100%,0.8);
+      font-family: Helvetica, sans-serif;
+      box-shadow: 0 4px 14px 0 rgba(0, 0, 0, 0.3);
+      border-radius: 12px; 
+    }
+      .Header{
+        padding: 20px 20px;
+        box-shadow: 0 4px 14px 0 rgba(0, 0, 0, 0.3);
+        border-radius: 12px;
+        padding: 10px;
+        font-size: 3rem;
+      }
+      .cost-legend {
+        margin-bottom: 5vh;
+      }
+      .block {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    
+        .legend1 {
+          height: 20px;
+        }
+        .legend2 {
+          height: 20px;
+        }
+        .legend3 {
+          height: 20px;
+        }
+      }
+  }
+
+@media (max-width: 340px){
+
+  }
+
+

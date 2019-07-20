@@ -61,10 +61,6 @@ class Register extends Component {
     this.props.register(newUser);
   }
 
-  componentDidMount() {
-    this.props.setRegister();
-  }
-
   componentWillUnmount() {
     this.props.clearRoute();
   }
@@ -81,8 +77,9 @@ class Register extends Component {
         <div className = "Register">
           <Fade>
         <Card className="Card">
-        <Badge className = "Header" color="secondary">Register</Badge>
-
+        <div className = "Header-container">
+          <Badge className = "Header" color="secondary">Register</Badge>
+          </div>
           <Form className="Form">
           <Col>
               <FormGroup className = "Formgroup">

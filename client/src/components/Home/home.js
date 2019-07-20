@@ -21,7 +21,7 @@ class Home extends Component {
  
              <ScrollBar />
              <Section 
-                 title="Taxi Companion App."
+                 title="Taxi Insights."
                  dark={false}
                  header={true}
                  id="main"
@@ -30,7 +30,15 @@ class Home extends Component {
                  page = "/"
                  img = ' taxis '
              /> 
-
+            <Section 
+                title="Maps"
+                subtitle={this.state.placeholder.section4}
+                dark={false}
+                header={false}
+                id="graphs"
+                page = "/maps"
+                img = ' mapimg '
+            />
             <Section 
                 title="charts"
                 subtitle={this.state.placeholder.section2}
@@ -42,15 +50,7 @@ class Home extends Component {
             />
 
             
-            <Section 
-                title="Maps"
-                subtitle={this.state.placeholder.section4}
-                dark={false}
-                header={false}
-                id="graphs"
-                page = "/maps"
-                img = ' mapimg '
-            />
+
 
             <Section 
                 title="Login / Register"

@@ -41,17 +41,6 @@ class ScrollBar extends Component {
           <li className="scroll-item">
           <LinkScroll
               activeClass="active"
-              to="charts"
-              spy={true}
-              smooth={true}
-              offset={-300}
-              duration={500} >
-              Charts
-            </LinkScroll>
-            </li>
-          <li className="scroll-item">
-          <LinkScroll
-              activeClass="active"
               to="graphs"
               spy={true}
               smooth={true}
@@ -60,6 +49,18 @@ class ScrollBar extends Component {
               Maps
             </LinkScroll>
             </li>
+          <li className="scroll-item">
+          <LinkScroll
+              activeClass="active"
+              to="charts"
+              spy={true}
+              smooth={true}
+              offset={-300}
+              duration={500} >
+              Charts
+            </LinkScroll>
+            </li>
+
             <li 
                 className="scroll-item"
                 onClick={this.scrollToBottom}>

@@ -3,7 +3,7 @@ import { BrowserRouter, Route, Switch} from 'react-router-dom';
 
 // Redux imports
 import { Provider } from 'react-redux';
-import { loadUser } from './actions/auth';
+// import { loadUser } from './actions/auth';
 import store from './store';
 import PropTypes from 'prop-types';
 
@@ -15,10 +15,10 @@ import Footer from './components/Footer/footer';
 import Charts from './components/Charts/charts';
 import Chart1 from './components/Charts/Chart1/chart1';
 import Maps from './components/Maps/mapindex';
-import CostMap from './components/Maps/Cost/costmap';
-import Map2 from './components/Maps/Map2/map2';
-import Map3 from './components/Maps/Map3/map3';
-import Map4 from './components/Maps/Map4/map4';
+import CostMap from './components/Maps/CostMap/costmap';
+import TimeMap from './components/Maps/TimeMap/timemap';
+import CostNorm from './components/Maps/CostNorm/costnorm';
+import TimeNorm from './components/Maps/TimeNorm/timenorm';
 import Auth from './components/Auth/login';
 import Register from './components/Auth/register';
 import Contact from './components/Contact/contact';
@@ -33,10 +33,10 @@ class App extends Component {
     isAuthenticated: PropTypes.bool
   }
 
-  componentDidMount() {
-    store.dispatch(loadUser());
-    
-  }
+  // componentDidMount() {
+  //   store.dispatch(loadUser());
+  // }
+
   componentDidUpdate() {
     
   }
@@ -66,9 +66,9 @@ class App extends Component {
                       )} /> 
                     <Route exact path="/maps" component={Maps} />
                     <Route exact path="/maps/costmap"  component={CostMap} />
-                    <Route exact path="/maps/2"  component={Map2} />
-                    <Route exact path="/maps/3"  component={Map3} />
-                    <Route exact path="/maps/4"  component={Map4} />
+                    <Route exact path="/maps/timemap"  component={TimeMap} />
+                    <Route exact path="/maps/costnorm"  component={CostNorm} />
+                    <Route exact path="/maps/timenorm"  component={TimeNorm} />
                     <Route exact path="/login" component={Auth} />
                     <Route exact path="/register" component={Register} />
                     <Route exact path="/contact" component={Contact} />

@@ -1,0 +1,287 @@
+.mapsection {
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.6;
+    width: 100%;
+    height: 25vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+
+.textsection {
+  display: flex;
+  z-index: 100000;
+
+  .textsubsection{
+    // navbar f7f5ea
+    // 1st: #fcf2af
+    background-color: #fcf2f5;
+    flex-basis: 100%;
+    font-family: 'Nunito', sans-serif;
+    font-size: 1.2rem;
+    font-weight: 400;
+    box-shadow: 14px 0px 14px 0px rgba(0, 0, 0, .3);
+    padding: 2rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    .inner {
+      display: flex;
+      width: 80%;
+      background-color: #fcf2f5;
+      flex-direction: row;
+      justify-content: space-between;
+
+      .inner-icon {
+        padding-right: 30px;
+      }
+
+
+      }
+    }
+  }
+
+.buttond:hover {
+  cursor: pointer;
+}
+.textsectionmobile {
+display: none;
+}
+
+.carousel-item > a {
+  height: 20vh;
+  width: 100vw;
+  background-color: #f7f5ea;
+}
+.carousel-item > img {
+  width: 100vw;
+}
+.carousel-img1 {
+  height: 45vh;
+  background: url('../../assets/nyc-01.svg') no-repeat  fixed; 
+  width: 100%;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  .text {
+    position:relative;
+    text-align: relative;
+    color: #000;
+  
+  }
+  
+  .text .title {
+    background-color: #111;
+    color: #fff;
+    padding: 20px;
+    border-color: #111 !important;
+    font-size: 37px;
+    letter-spacing: 8px;
+    text-transform: uppercase;
+  }
+}
+.carousel-img2 {
+  height: 45vh;
+  background: url('../../assets/nyc2-01.svg') no-repeat  fixed; 
+  width: 100%;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.carousel-img3 {
+  height: 45vh;
+  background: url('../../assets/nyc3-01.svg') no-repeat  fixed; 
+  width: 100%;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+
+.mapsection-dark {
+  background: #333;
+  color: white;
+
+}
+.mapsection-content {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 40px;
+  font-size: 1.3rem;
+  justify-content: space-between;
+}
+
+.mapsection-text {
+  position:relative;
+  text-align: center;
+  color: #000;
+
+}
+
+.mapsection-text .border-title {
+  background-color: #111;
+  color: #fff;
+  padding: 20px;
+  border-color: #111 !important;
+  font-size: 37px;
+  letter-spacing: 8px;
+  text-transform: uppercase;
+}
+
+.mapsection-text .border {
+  background-color: #111;
+  color: #fff;
+  padding: 20px;
+  border-color: #111 !important;
+  font-size: 25px;
+  letter-spacing: 4px;
+}
+
+.mapsection h1 {
+    font-size: 4rem;
+}
+
+.textsectionmobile {
+  display: flex;
+  z-index: 100000;
+
+  .textsubsection{
+    // navbar f7f5ea
+    // 1st: #fcf2af
+    background-color: #f5f2e5;
+    flex-basis: 100%;
+    font-family: 'Nunito', sans-serif;
+    font-size: 2rem;
+    font-weight: 500;
+    box-shadow: 14px 0px 14px 0px rgba(0, 0, 0, .3);
+    padding: 2rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    .inner {
+      margin-left: 10vh;
+      display: flex;
+      width: 80%;
+      flex-direction: row;
+      justify-content: center;
+
+      .inner-icon {
+        padding-left: 50px;
+        display: flex;
+        
+        flex-direction: column;
+        justify-content: center;
+        .button {
+          box-shadow: 14px 0px 14px 0px rgba(0, 0, 0, .3);
+          padding: 1.2rem 5rem;
+          font-family: 'Nunito', sans-serif;
+        }
+
+      }
+      .innner-favicon {
+        display: none !important;
+      }
+    }
+    
+  }
+}
+
+.hiddenmenu {
+  display: none !important;
+}
+
+
+
+@media (max-width: 1002px){
+
+  .textsection {
+    display: none;
+  }
+  .carousel-img1 {
+    height: 35vh;
+
+  }
+  .carousel-img2 {
+    height: 35vh;
+
+  }
+  
+  .carousel-img3 {
+    height: 35vh;
+  }
+  .textsectionmobile {
+    display: flex;
+    z-index: 100000;
+  
+    .textsubsection{
+      // navbar f7f5ea
+      // 1st: #fcf2af
+      background-color: #f7f5ea;
+      flex-basis: 100%;
+      font-family: 'Nunito', sans-serif;
+      font-size: 1rem;
+      font-weight: 500;
+      box-shadow: 14px 0px 14px 0px rgba(0, 0, 0, .3);
+      padding: 2rem;
+      padding-left: 2rem;
+      padding-right: 2rem;
+      .inner {
+        margin-left: 5vh;
+
+    }
+  }
+}
+}
+
+@media (max-width: 551px){
+
+  .textsectionmobile {
+  
+    .textsubsection{
+    .inner {
+      margin-left: 1.5rem;
+      .inner-icon {
+        .button {
+          padding: 1.2rem 1rem;
+          font-family: 'Nunito', sans-serif;
+        }
+        .innner-favicon {
+          display: none !important;
+        }
+      }
+
+    }
+  }
+}
+}
+
+@media (max-width: 400px){
+
+  .textsectionmobile {
+    margin: 0;
+    .textsubsection{
+      margin: 0;
+      padding: 0;
+    .inner {
+      margin: 0rem;
+      .inner-icon {
+        .button {
+          margin-left: 2vh;
+          padding: 1rem;
+          font-family: 'Nunito', sans-serif;
+        }
+
+      }
+
+    }
+  }
+}
+.innner-favicon {
+  display: none !important;
+}
+}

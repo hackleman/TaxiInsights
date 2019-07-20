@@ -55,9 +55,9 @@ class Auth extends Component {
     this.props.login(newUser);
   }
 
-  componentDidMount() {
-    this.props.setLogin();
-  }
+  // componentDidMount() {
+  //   this.props.setLogin();
+  // }
 
   componentWillUnmount() {
     this.props.clearRoute();
@@ -74,7 +74,10 @@ class Auth extends Component {
       <Container className="Login-container">
         <Fade>
         <Card className="Card">
-        <Badge className = "Header" color="secondary">Sign In</Badge>
+          <div className = "Header-container">
+          <Badge className = "Header" color="secondary">Sign In</Badge>
+          </div>
+        
           <Form className="Form">
             <Col>
               <FormGroup className = "Formgroup">

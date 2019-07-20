@@ -59,16 +59,17 @@ class NavBar extends Component {
                         alt="Logo."
                     />
                     </Link>
-                    <Link to="/charts">
-                        <li className={"nav-item" + (this.state.charts ? " activelink" : "")}>
-                            Charts
-                            </li>
-                    </Link>
                     <Link to="/maps">
                         <li className={"nav-item" + (this.state.maps ? " activelink" : "")}>
                             Maps
                             </li>
                     </Link>
+                    <Link to="/charts">
+                        <li className={"nav-item" + (this.state.charts ? " activelink" : "")}>
+                            Charts
+                            </li>
+                    </Link>
+
                     <Link to="/contact">
                         <li className={"nav-item" + (this.state.contact ? " activelink" : "")}>
                             Contact Me
