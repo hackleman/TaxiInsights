@@ -130,7 +130,7 @@ class BaseMap extends Component {
     let category = this.state.categoryFilter.toString();
     let dataURI = this.props.datauri.toString();
 
-    axios.get('http://localhost:4000/data/' + dataURI +  category)
+    axios.get('http://ec2-50-16-48-163.compute-1.amazonaws.com/data/' + dataURI +  category)
     .then(function (response) {
       current.setStyle(response)
     })
