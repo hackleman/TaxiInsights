@@ -21,11 +21,11 @@ Copy `config.sample.json` to `config.json` then edit it with the url where you h
 - Postgres connection string
 - Port for the backend
 
-## Start & watch
+### Start & watch
 
     $ npm start
 
-## Simple build for production
+### Simple build for production
 
     $ npm run build
 
@@ -47,6 +47,3 @@ Copy `config.sample.json` to `config.json` then edit it with the url where you h
 
 ---
 
-### Chloropleth Maps
-
-<img src=https://imgur.com/a/NhetQJJ" />
