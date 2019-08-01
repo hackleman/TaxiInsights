@@ -1,5 +1,9 @@
 # TAXI INSIGHTS 
 
+## Description
+
+An interactive trend visualizer for the NYC TLC dataset.  The Postgres server contains over 1 million trip entries for the 2017-2018 period.  Most of the trends are map-based in the form of choropleths.  Every page formulates a query over every trip in the dataset.  These are then color-coded by district zone.
+
 ## Requirements
 
 To run the dev version, all you need is Node.js installed on your environment.
