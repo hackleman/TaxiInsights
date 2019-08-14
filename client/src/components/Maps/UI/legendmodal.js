@@ -1,9 +1,9 @@
 import React from 'react';
-import logo from '../assets/costlegend.svg'
-import block1 from '../assets/block1legend.svg'
-import block2 from '../assets/block2legend.svg'
-import block3 from '../assets/block3legend.svg'
-import config from '../assets/config.js';
+import logo from '../../../assets/costlegend.svg'
+import block1 from '../../../assets/block1legend.svg'
+import block2 from '../../../assets/block2legend.svg'
+import block3 from '../../../assets/block3legend.svg'
+import config from '../../../assets/config.js';
 import {
   Modal, 
   ModalHeader, 

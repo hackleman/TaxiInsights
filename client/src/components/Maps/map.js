@@ -3,13 +3,13 @@ import L from 'leaflet';
 import { connect } from 'react-redux';
 import axios from 'axios';
 
-import Heading from './UI/Headers/headers';
+import Heading from './UI/Sections/Headers/headers';
 import Filter from './UI/filter';
 import MobileFilter from './UI/filtermodal';
 import Legend from './UI/legend';
 import LegendModal from './UI/legendmodal';
-import config from './assets/config.js';
-import geojson from './assets/taxi.json';
+import config from '../../assets/config.js';
+import geojson from '../../assets/taxi.json';
 
 
 import './map.scss';

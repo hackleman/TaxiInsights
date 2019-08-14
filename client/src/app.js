@@ -3,39 +3,36 @@ import { BrowserRouter, Route, Switch} from 'react-router-dom';
 
 // Redux imports
 import { Provider } from 'react-redux';
-// import { loadUser } from './actions/auth';
 import store from './store';
 import PropTypes from 'prop-types';
+
+// Styling
+import { CSSTransition,TransitionGroup } from 'react-transition-group';
+import './app.scss';
 
 // Component imports
 import Home from './components/Home/home';
 import ScrollToTop from './components/Home/Scroll/scroll';
 import NavBar from './components/Navbar/navbar';
 import Footer from './components/Footer/footer';
-import Charts from './components/Charts/charts';
-import Chart1 from './components/Charts/Chart1/chart1';
-import Maps from './components/Maps/mapindex';
-import CostMap from './components/Maps/CostMap/costmap';
-import TimeMap from './components/Maps/TimeMap/timemap';
-import CostNorm from './components/Maps/CostNorm/costnorm';
-import TimeNorm from './components/Maps/TimeNorm/timenorm';
-import Auth from './components/Auth/login';
-import Register from './components/Auth/register';
-import Contact from './components/Contact/contact';
 
-// Styling
-import { CSSTransition,TransitionGroup } from 'react-transition-group';
-import './app.scss';
+const Chart1 = React.lazy(() => import('./components/Charts/Chart1/chart1'));
+const Maps = React.lazy(() => import('./components/Maps/mapindex'));
+const CostMap = React.lazy(() => import('./components/Maps/CostMap/costmap'));
+const TimeMap = React.lazy(() => import('./components/Maps/TimeMap/timemap'));
+const CostNorm = React.lazy(() => import('./components/Maps/CostNorm/costnorm'));
+const TimeNorm = React.lazy(() => import('./components/Maps/TimeNorm/timenorm'));
+const Auth = React.lazy(() => import('./components/Auth/login'));
+const Register = React.lazy(() => import('./components/Auth/register'));
+const Contact = React.lazy(() => import('./components/Contact/contact'));
+const Charts = React.lazy(() => import('./components/Charts/charts'));
+
 
 class App extends Component {
 
   static propTypes = {
     isAuthenticated: PropTypes.bool
   }
-
-  // componentDidMount() {
-  //   store.dispatch(loadUser());
-  // }
 
   componentDidUpdate() {
     
@@ -58,6 +55,7 @@ class App extends Component {
                 <NavBar />
                 <div className = "mainBody">
                   <Switch location = {location}>
+                  <React.Suspense fallback={<p className = "loadingScreen">Loading</p>}>
                     <Route exact path="/" component={Home} /> 
                     <Route exact path="/charts" component={Charts} />
                     <Route exact path="/charts/1" 
@@ -72,7 +70,7 @@ class App extends Component {
                     <Route exact path="/login" component={Auth} />
                     <Route exact path="/register" component={Register} />
                     <Route exact path="/contact" component={Contact} />
-                    <Route render = {() => <div>Page Not Found</div>} />
+                  </React.Suspense>
                   </Switch>   
                 </div>
                 <Footer />

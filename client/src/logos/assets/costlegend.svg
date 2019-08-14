@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 23.0.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 489 101.7" style="enable-background:new 0 0 489 101.7;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:#FFF2AF;}
+	.st1{fill:#FEB24C;}
+	.st2{fill:#E31A1C;}
+	.st3{fill:#BD0026;}
+	.st4{font-family:'ArialMT';}
+	.st5{font-size:36px;}
+	.st6{fill:none;stroke:#000000;stroke-miterlimit:10;}
+</style>
+<title>costlegend</title>
+<rect class="st0" width="122" height="61"/>
+<polygon class="st0" points="245,30.5 244,30.5 244,30.5 245,30.5 "/>
+<rect x="122" class="st1" width="122" height="61"/>
+<rect x="245" class="st2" width="122" height="61"/>
+<rect x="367" class="st3" width="122" height="61"/>
+<text transform="matrix(1 0 0 1 27.49 101.67)" class="st4 st5">Min.</text>
+<text transform="matrix(1 0 0 1 27.49 101.67)" class="st6 st4 st5">Min.</text>
+<text transform="matrix(1 0 0 1 389.49 101.67)" class="st4 st5">Max.</text>
+<text transform="matrix(1 0 0 1 389.49 101.67)" class="st6 st4 st5">Max.</text>
+</svg>

@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 
-import './sections.scss';
+import '../sections.scss';
 
 
 class MapHeader extends Component {
@@ -8,7 +8,7 @@ class MapHeader extends Component {
     render() {
         return (
 
-        <div className = 'carousel-img2'>
+        <div className = 'header-img'>
           <div className ="mapsection-text">
             <span className="border-title">
             Chloropleth Maps

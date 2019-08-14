@@ -1,6 +1,6 @@
 import React from 'react';
 import Slider from 'react-input-slider';
-import config from '../assets/config.js';
+import config from '../../../assets/config.js';
 import {
   Button, Badge
 } from 'reactstrap';

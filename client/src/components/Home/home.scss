@@ -126,12 +126,16 @@
 Styling for individual background images
 
 */
-
+.default {
+  background-color: #f4f4f4;
+  height: 33vh;
+}
 .chartimg {
-  background-image: url('./images/charts-01.svg')  !important;
+  background-image: url('./images/file-01.svg')  !important;
   background-attachment: fixed;
   background-position: center; 
   background-size: cover;
+  height: 75vh !important;
 }
 .taxis {
   background-image: url('./images/20277.jpg')  !important;
@@ -140,8 +144,9 @@ Styling for individual background images
   background-size: cover;
 }
 .mapimg {
-  background-image: url('../Maps/assets/nyc3-01.svg')  !important;
+  background-image: url('../../assets/nyc3.svg')  !important;
   background-attachment: fixed;
   background-position: center; 
   background-size: cover;
+  height: 75vh !important;
 }

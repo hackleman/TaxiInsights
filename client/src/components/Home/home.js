@@ -56,6 +56,7 @@ class Home extends Component {
                 title="Login / Register"
                 dark={false}
                 header={false}
+                img = ' default'
                 id="about"
                 nobody = {true}
                 page = "/login"

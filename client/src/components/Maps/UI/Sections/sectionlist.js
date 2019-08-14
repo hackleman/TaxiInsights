@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
-import Section from './sections';
+import Section from './section';
 import { animateScroll as scroll} from "react-scroll";
 
 import './sections.scss';
 
 
-class DropdownSection extends Component {
+class SectionList extends Component {
     constructor(props) {
         super(props);
 
@@ -32,31 +32,30 @@ class DropdownSection extends Component {
                         title="Fare"
                         dark={false}
                         page = "/maps/costmap"
+                        padding = ""
                         color = '#eae5c8'
                     />
                     <Section 
                         title="Trip Time"
                         dark={true}
                         page = "/maps/timemap"
+                        padding = ""
                         color = '#ECD9BA'
                     />
                     <Section 
                         title="Normalized Fare"
                         dark={false}
                         page = "/maps/costnorm"
+                        padding = ""
                         color = '#dcd3a3'
                     />
                     <Section 
                         title="Normalized Trip Time"
                         dark={true}
                         page = "/maps/timenorm"
+                        padding = " bottom "
                         color = '#DEC19B'
                     />
-                    <Section
-                        title=""
-                        dark={true}
-                        page = "/maps/timenorm"
-                        color = '#DEC19B' />
                 </div>
             </div>
         );
@@ -64,5 +63,5 @@ class DropdownSection extends Component {
   
 }
 
-export default DropdownSection;
+export default SectionList;
 
