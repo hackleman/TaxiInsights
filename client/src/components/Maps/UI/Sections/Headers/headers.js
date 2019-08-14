@@ -8,7 +8,7 @@ export default function MapHeader({ title, dark, id }) {
             <div className="mapsection-content" >
                 <div className ={ "mapsection-text" }>
                     <span className="border-title">
-                    {title}
+                        {title}
                     </span>
                 </div>
             </div>

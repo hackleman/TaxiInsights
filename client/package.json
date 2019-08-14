@@ -30,7 +30,8 @@
     "react-transition-group": "^4.1.1",
     "reactstrap": "^7.1.0",
     "redux": "^4.0.1",
-    "redux-thunk": "^2.3.0"
+    "redux-thunk": "^2.3.0",
+    "victory": "^32.3.6"
   },
   "scripts": {
     "start": "react-scripts start",

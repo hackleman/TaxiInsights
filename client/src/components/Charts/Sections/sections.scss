@@ -1,0 +1,26 @@
+.chartsection {
+    height: 25vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.3rem;
+    
+  .title {
+    background-color: #111;
+    color: #f4f4f4;
+    padding: 1rem 2rem;
+    font-size: 3rem;
+    letter-spacing: 8px;
+    text-transform: uppercase;
+  }
+}
+
+@media (max-width: 600px) {
+  .chartsection {
+    .title {
+      padding: 1rem 2rem;
+      font-size: 2rem;
+    }
+  }
+}

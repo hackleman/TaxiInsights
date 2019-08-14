@@ -1,23 +1,45 @@
 .chartindex {
     width: 100%;
-
     a:hover {
         text-decoration: none;
     }
-   
 }
 
-  
-@media (max-width: 732px){
+.Chart {
+    width: 100%;
+    background: #f4f4f4;
+    .Header {
+        height: 25vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        .title {
+            background-color: #111;
+            color: #fff;
+            padding: 1rem 3rem;
+            font-size: 5rem;
+        }
+    }
+    .Component{
+        box-shadow: 14px 0px 14px 0px rgba(0, 0, 0, .3);
+        background: #f7f5ea;
+        .VictoryContainer {
+            svg {
+                max-height: 85vh;
+            }
+            margin: 0 auto;
+        }
+    }
+}
 
-    .chartsection-text .border-title {
-      background-color: #111;
-      color: #fff;
-      padding: 20px;
-      border-color: #111 !important;
-      font-size: 27px;
-      letter-spacing: 4px;
-      text-transform: uppercase;
+@media (max-width: 600px) {
+    .Chart {
+        .Header {
+            .title {
+                padding: 1rem 2rem;
+                font-size: 2rem;
+            }
+        }
     }
-  
-    }
+}  

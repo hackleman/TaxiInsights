@@ -1,3 +1,27 @@
-.chart1section-dark {
-    background: #aadaff;
+.index-header {
+    height: 45vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-image: url('../../../assets/images/file-01.svg')  !important;
+    background-attachment: fixed;
+    background-position: center; 
+    background-size: cover;
+    .title {
+        background-color: #111;
+        color: #fff;
+        padding: 1rem 3rem;
+        font-size: 5rem;
+    }
 }
+
+@media (max-width: 600px) {
+    .index-header {
+        .title {
+            padding: 1rem 3rem;
+            font-size: 3rem;
+        }
+    }   
+}
+

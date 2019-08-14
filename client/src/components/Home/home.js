@@ -1,69 +1,61 @@
 import React, { Component } from 'react';
-import Section from './Sections/section';
+import LandingSection from './LandingSection';
 import ScrollBar from '../Scrollbar/scrollbar';
-import placeholder from './Sections/placeholder';
+import config from '../../assets/config';
 import './home.scss'
 
 class Home extends Component {
-
   state = {
-      placeholder: placeholder
-  }
-  
-  
-  componentDidMount() {
+      bodytext: config.landingsections
   }
   
   render() {
-
     return (
         <div className="landingpage">
- 
              <ScrollBar />
-             <Section 
+             <LandingSection 
                  title="Taxi Insights."
-                 dark={false}
-                 header={true}
                  id="main"
-                 extra = {true}
-                 nobody = {true}
                  page = "/"
-                 img = ' taxis '
+                 img = ' main '
+                 header = {true}
              /> 
-            <Section 
-                title="Maps"
-                subtitle={this.state.placeholder.section4}
-                dark={false}
-                header={false}
+            <LandingSection 
+                subtitle={this.state.bodytext.section4}
                 id="graphs"
                 page = "/maps"
-                img = ' mapimg '
+                img = ' map-body '
+                body = {true}
             />
-            <Section 
-                title="charts"
-                subtitle={this.state.placeholder.section2}
-                dark={true}
-                header={false}
+            <LandingSection 
+                title="Maps"
+                id="graphs"
+                page = "/maps"
+                img = ' map-header '
+                header = {true}
+            />
+            <LandingSection 
+                subtitle={this.state.bodytext.section2}
                 id="charts"
                 page = "/charts"
-                img = ' chartimg '
+                img = ' chart-body '
+                body = {true}
             />
-
-            
-
-
-            <Section 
+            <LandingSection 
+                title="charts"
+                id="charts"
+                page = "/charts"
+                img = ' chart-header '
+                header = {true}
+            />
+            <LandingSection 
                 title="Login / Register"
-                dark={false}
-                header={false}
-                img = ' default'
                 id="about"
-                nobody = {true}
                 page = "/login"
+                img = ' login '  
+                header = {true}         
             />
-
         </div>
-
     )
   }
 }

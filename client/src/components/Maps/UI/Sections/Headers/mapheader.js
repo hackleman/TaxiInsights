@@ -11,7 +11,7 @@ class MapHeader extends Component {
         <div className = 'header-img'>
           <div className ="mapsection-text">
             <span className="border-title">
-            Chloropleth Maps
+              Chloropleth Maps
             </span>
           </div>
         </div>
